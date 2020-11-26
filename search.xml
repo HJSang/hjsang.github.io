@@ -8,7 +8,7 @@
       <link href="2020/11/26/Algorithm-Binary-Search/"/>
       <url>2020/11/26/Algorithm-Binary-Search/</url>
       
-        <content type="html"><![CDATA[<p><img src="../../public/medias/image/binary_search.png" alt="image"></p>]]></content>
+        <content type="html"><![CDATA[<p><img src="../../public/medias/image/binary_search.png" alt="image"></p><p>Binary Search (BS) 是一个非常高频的Leetcode 算法题。 BS 经常被用来search ordered elements。当你看到题目涉及到sorted array， binary search tree，算法复杂度 $O(log n)$  或者sort可以让算法变得简单的时候，请优先考虑BS。有些题目没有明确的提示要使用BS， 但是使用BS会大大的提高efficiency。</p><p>写好一个BS算法 看着简单， 其实需要非常高的理解能力。 下面这些坑都是需要踩过了才知道：</p>]]></content>
       
       
       
