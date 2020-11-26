@@ -4,6 +4,29 @@
   
     
     <entry>
+      <title>Algorithm: Binary Search</title>
+      <link href="2020/11/26/Algorithm-Binary-Search/"/>
+      <url>2020/11/26/Algorithm-Binary-Search/</url>
+      
+        <content type="html"><![CDATA[<p><img src="../medias/image/binary_search.png" alt="image"></p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Algorithm </tag>
+            
+            <tag> LeetCode </tag>
+            
+            <tag> Binary Search </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Hello World</title>
       <link href="2020/11/24/hello-world/"/>
       <url>2020/11/24/hello-world/</url>
