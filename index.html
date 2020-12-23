@@ -89,7 +89,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="199-Binary-Tree-Right-Side-View"><a href="#199-Binary-Tree-Right-Side-View" class="headerlink" title="199. Binary Tree Right Side View"></a>199. Binary Tree Right Side View</h1><p>Medium</p>
+        <p>Medium</p>
 <p>Given a binary tree, imagine yourself standing on the right side of it, return the values of the nodes you can see ordered from top to bottom.</p>
 <p><strong>Example</strong>:</p>
 <pre><code>Input: [1,2,3,null,5,null,4]
@@ -101,11 +101,93 @@ Explanation:
 2     3         &lt;---
  \     \
   5     4       &lt;---
+</code></pre><p>When you need to search some values from the tree, please consider the tree traversal methods: BFS and DFS. For this specific problem, we need to find the most right elements at each level. Therefore, we need to find the level information and save all elements from the same level. It seems that BFS is easy to use. In most cases, dfs also performs the similar function of BFS in a different traversal trace. </p>
+<h2 id="BFS"><a href="#BFS" class="headerlink" title="BFS"></a>BFS</h2><p>Breath-First-Search (BFS): </p>
+<ul>
+<li>Initial current node list: curNode = [root]</li>
+<li>while curNode is not empty:<ul>
+<li>nextNode = [j for i in curNode for j in (i.left, i.right) if j]</li>
+<li>the most right element is nextNode[-1].val</li>
+<li>curNode = nextNode</li>
+</ul>
+</li>
+</ul>
+<p>Please consider the corner case: tree is empty.</p>
+<p>Please make sure the node is valid when extracting the val.</p>
+<p><strong>Iterative Python Code: BFS</strong></p>
+<pre class=" language-lang-python"><code class="language-lang-python"># Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+
+class Solution:
+    def rightSideView(self,root: TreeNode) -> List[int]:
+        res = []
+        if not root:
+            return res
+        curNode=[root]
+        res.append(root.val)
+        while curNode:
+            nextNode =[j for i in curNode for j in (i.left,i.right) if j]
+            if nextNode:
+                res.append(nextNode[-1].val)
+            curNode = nextNode
+        return res
 </code></pre>
+<ul>
+<li>The time complexity is <strong>O(n)</strong>: single loop traversal </li>
+<li>The space complexity is <strong>O(log(n))</strong>: CurNode and NextNode for level elements.</li>
+</ul>
+<h2 id="DFS"><a href="#DFS" class="headerlink" title="DFS"></a>DFS</h2><p>Depth-First-Search (DFS): Easy to implement by recursive way but difficult to use iterative way</p>
+<p><strong>Recursive DFS python code</strong>:</p>
+<ul>
+<li>Use a list of list  to save all tree elements and the index of the list is the level+1 of the tree</li>
+<li>if length of the list &lt; level +1, we need to add another list for new level</li>
+<li>To write the dfs function using the recursive way, 1) terminate confition first, 2) when the valid node comes, perform operation, 3) then, consider children nodes.</li>
+</ul>
+<pre class=" language-lang-python"><code class="language-lang-python">class Solution:
+    def rightSideView(self, root: TreeNode) -> List[int]:
+        res = []
+        if not root:
+            return res
+        self.dfs(root,res,0)
+        return [i[-1] for i in res]
+    def dfs(self,root,res, level):
+        if not root:
+            return
+        if len(res) < level+1:
+            res.append([])
+        res[level].append(root.val)
+        self.dfs(root.left,res,level+1)
+        self.dfs(root.right,res,level+1)
+</code></pre>
+<p><strong>Iterative BFS python code</strong>:</p>
+<ul>
+<li>Use stack</li>
+</ul>
+<pre class=" language-lang-python"><code class="language-lang-python">class Solution:
+    def rightSideView(self, root: TreeNode) -> List[int]:
+        res = []
+        if not root:
+            return res
+        stack = [(root,0)]
+        while stack:
+            node, level = stack.pop()
+            if node:
+                if len(res)<level+1:
+                    res.append([])
+                res[level].append(node.val)
+                stack.append((node.right,level+1))
+                stack.append((node.left,level+1))
+        return [i[-1] for i in res]
+</code></pre>
+
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://hjsang.github.io/2020/12/23/Leetcode-199-Binary-Tree-Right-Side-View/" data-id="ckj1hhx320003fuu2dj621c04" class="article-share-link">Share</a>
+      <a data-url="http://hjsang.github.io/2020/12/23/Leetcode-199-Binary-Tree-Right-Side-View/" data-id="ckj1kpi7q0003qlu2hqqk3b11" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/source/tags/Leetcode/" rel="tag">Leetcode</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/source/tags/Tree/" rel="tag">Tree</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/source/tags/bfs/" rel="tag">bfs</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/source/tags/dfs/" rel="tag">dfs</a></li></ul>
@@ -264,7 +346,7 @@ Follow up: Your solution should be in logarithmic complexity.
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://hjsang.github.io/2020/11/26/Algorithm-Binary-Search/" data-id="ckj1hhx2y0001fuu2hv5yhs09" class="article-share-link">Share</a>
+      <a data-url="http://hjsang.github.io/2020/11/26/Algorithm-Binary-Search/" data-id="ckj1kpi7m0001qlu2cljsf7jp" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/source/tags/Algorithm/" rel="tag">Algorithm</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/source/tags/Binary-Search/" rel="tag">Binary Search</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/source/tags/LeetCode/" rel="tag">LeetCode</a></li></ul>
@@ -315,7 +397,7 @@ Follow up: Your solution should be in logarithmic complexity.
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://hjsang.github.io/2020/11/24/hello-world/" data-id="ckj1hhx380006fuu2dep048tz" class="article-share-link">Share</a>
+      <a data-url="http://hjsang.github.io/2020/11/24/hello-world/" data-id="ckj1kpi7v0006qlu2c6js2l7q" class="article-share-link">Share</a>
       
       
     </footer>

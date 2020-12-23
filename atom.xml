@@ -6,7 +6,7 @@
   <link href="http://hjsang.github.io/atom.xml" rel="self"/>
   
   <link href="http://hjsang.github.io/"/>
-  <updated>2020-12-23T13:59:43.568Z</updated>
+  <updated>2020-12-23T15:29:45.640Z</updated>
   <id>http://hjsang.github.io/</id>
   
   <author>
@@ -21,14 +21,15 @@
     <link href="http://hjsang.github.io/2020/12/23/Leetcode-199-Binary-Tree-Right-Side-View/"/>
     <id>http://hjsang.github.io/2020/12/23/Leetcode-199-Binary-Tree-Right-Side-View/</id>
     <published>2020-12-23T13:56:27.000Z</published>
-    <updated>2020-12-23T13:59:43.568Z</updated>
+    <updated>2020-12-23T15:29:45.640Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h1</summary>
+    <summary type="html">&lt;p&gt;Medium&lt;/p&gt;
+&lt;p&gt;Given a binary tree,</summary>
         
       
     
