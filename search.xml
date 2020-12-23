@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>Leetcode 199: Binary Tree Right Side View</title>
+      <link href="2020/12/23/Leetcode-199-Binary-Tree-Right-Side-View/"/>
+      <url>2020/12/23/Leetcode-199-Binary-Tree-Right-Side-View/</url>
+      
+        <content type="html"><![CDATA[<h1 id="199-Binary-Tree-Right-Side-View"><a href="#199-Binary-Tree-Right-Side-View" class="headerlink" title="199. Binary Tree Right Side View"></a>199. Binary Tree Right Side View</h1><p>Medium</p><p>Given a binary tree, imagine yourself standing on the right side of it, return the values of the nodes you can see ordered from top to bottom.</p><p><strong>Example</strong>:</p><pre><code>Input: [1,2,3,null,5,null,4]Output: [1, 3, 4]Explanation:   1            &lt;--- /   \2     3         &lt;--- \     \  5     4       &lt;---</code></pre>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Leetcode </tag>
+            
+            <tag> Tree </tag>
+            
+            <tag> dfs </tag>
+            
+            <tag> bfs </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Algorithm: Binary Search</title>
       <link href="2020/11/26/Algorithm-Binary-Search/"/>
       <url>2020/11/26/Algorithm-Binary-Search/</url>
