@@ -6,7 +6,7 @@
   <link href="http://hjsang.github.io/atom.xml" rel="self"/>
   
   <link href="http://hjsang.github.io/"/>
-  <updated>2020-12-24T14:52:12.545Z</updated>
+  <updated>2020-12-24T21:37:07.491Z</updated>
   <id>http://hjsang.github.io/</id>
   
   <author>
@@ -15,6 +15,36 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Leetcode 297: Serialize and Deserialize Binary Tree</title>
+    <link href="http://hjsang.github.io/2020/12/24/Leetcode-297-Serialize-and-Deserialize-Binary-Tree/"/>
+    <id>http://hjsang.github.io/2020/12/24/Leetcode-297-Serialize-and-Deserialize-Binary-Tree/</id>
+    <published>2020-12-24T21:26:28.000Z</published>
+    <updated>2020-12-24T21:37:07.491Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;Hard&lt;/p&gt;
+&lt;p&gt;Serialization is the</summary>
+        
+      
+    
+    
+    
+    
+    <category term="Leetcode" scheme="http://hjsang.github.io/source/tags/Leetcode/"/>
+    
+    <category term="Tree" scheme="http://hjsang.github.io/source/tags/Tree/"/>
+    
+    <category term="BFS" scheme="http://hjsang.github.io/source/tags/BFS/"/>
+    
+    <category term="DFS" scheme="http://hjsang.github.io/source/tags/DFS/"/>
+    
+  </entry>
   
   <entry>
     <title>Reading Note: Improving Web Search Ranking by Incorporating User Behavior Information</title>
