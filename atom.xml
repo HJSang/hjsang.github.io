@@ -6,7 +6,7 @@
   <link href="http://hjsang.github.io/atom.xml" rel="self"/>
   
   <link href="http://hjsang.github.io/"/>
-  <updated>2020-12-23T15:29:45.640Z</updated>
+  <updated>2020-12-24T14:07:24.396Z</updated>
   <id>http://hjsang.github.io/</id>
   
   <author>
@@ -17,11 +17,40 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Reading Note: Improving Web Search Ranking by Incorporating User Behavior Information</title>
+    <link href="http://hjsang.github.io/2020/12/23/Reading-Note-Improving-Web-Search-Ranking-by-Incorporating-User-Behavior-Information/"/>
+    <id>http://hjsang.github.io/2020/12/23/Reading-Note-Improving-Web-Search-Ranking-by-Incorporating-User-Behavior-Information/</id>
+    <published>2020-12-23T16:08:03.000Z</published>
+    <updated>2020-12-24T14:07:24.396Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;Introduction&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    
+    <category term="Web Search" scheme="http://hjsang.github.io/source/tags/Web-Search/"/>
+    
+    <category term="Implicit relevance feedback" scheme="http://hjsang.github.io/source/tags/Implicit-relevance-feedback/"/>
+    
+    <category term="Web search ranking" scheme="http://hjsang.github.io/source/tags/Web-search-ranking/"/>
+    
+    <category term="Paper reading notes" scheme="http://hjsang.github.io/source/tags/Paper-reading-notes/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Leetcode 199: Binary Tree Right Side View</title>
     <link href="http://hjsang.github.io/2020/12/23/Leetcode-199-Binary-Tree-Right-Side-View/"/>
     <id>http://hjsang.github.io/2020/12/23/Leetcode-199-Binary-Tree-Right-Side-View/</id>
     <published>2020-12-23T13:56:27.000Z</published>
-    <updated>2020-12-23T15:29:45.640Z</updated>
+    <updated>2020-12-23T15:31:34.976Z</updated>
     
     
       
