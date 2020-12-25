@@ -5,25 +5,23 @@
   
 
   
-  <title>Reading Note for  Wide and Deep Learning for Recommender Systems | 学习笔记</title>
+  <title>Leetcode 124: Binary Tree Maximum Path Sum | 学习笔记</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Paper link: Wide &amp; Deep Learning for Recommender Systems Introduction The input features are sparse Memorization of feature interactions through a wide set of cross-product feature transformations">
+  <meta name="description" content="Hard Given a non-empty binary tree, find the maximum path sum. For this problem, a path is defined as any node sequence from some starting node to any node in the tree along the parent-child connectio">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Reading Note for  Wide and Deep Learning for Recommender Systems">
-<meta property="og:url" content="http://hjsang.github.io/2020/12/25/Wide-and-Deep-Learning-for-Recommender-Systems/index.html">
+<meta property="og:title" content="Leetcode 124: Binary Tree Maximum Path Sum">
+<meta property="og:url" content="http://hjsang.github.io/2020/12/25/Leetcode-124-Binary-Tree-Maximum-Path-Sum/index.html">
 <meta property="og:site_name" content="学习笔记">
-<meta property="og:description" content="Paper link: Wide &amp; Deep Learning for Recommender Systems Introduction The input features are sparse Memorization of feature interactions through a wide set of cross-product feature transformations">
+<meta property="og:description" content="Hard Given a non-empty binary tree, find the maximum path sum. For this problem, a path is defined as any node sequence from some starting node to any node in the tree along the parent-child connectio">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://1.bp.blogspot.com/-Dw1mB9am1l8/V3MgtOzp3uI/AAAAAAAABGs/mP-3nZQCjWwdk6qCa5WraSpK8A7rSPj3ACLcB/s1600/image04.png">
-<meta property="og:image" content="https://miro.medium.com/max/700/1*XHvOuICw2E9inCJJxIyKUg.png">
-<meta property="article:published_time" content="2020-12-25T20:47:32.000Z">
-<meta property="article:modified_time" content="2020-12-25T21:31:30.003Z">
+<meta property="article:published_time" content="2020-12-25T14:42:28.000Z">
+<meta property="article:modified_time" content="2020-12-25T15:34:07.974Z">
 <meta property="article:author" content="Hejian Sang">
-<meta property="article:tag" content="paper">
-<meta property="article:tag" content="recommender system">
-<meta property="article:tag" content="deep learning">
+<meta property="article:tag" content="Leetcode">
+<meta property="article:tag" content="Tree">
+<meta property="article:tag" content="Binary Tree">
+<meta property="article:tag" content="Tree Traversal">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://1.bp.blogspot.com/-Dw1mB9am1l8/V3MgtOzp3uI/AAAAAAAABGs/mP-3nZQCjWwdk6qCa5WraSpK8A7rSPj3ACLcB/s1600/image04.png">
   
     <link rel="alternate" href="/atom.xml" title="学习笔记" type="application/atom+xml">
   
@@ -76,10 +74,10 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-Wide-and-Deep-Learning-for-Recommender-Systems" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-Leetcode-124-Binary-Tree-Maximum-Path-Sum" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2020/12/25/Wide-and-Deep-Learning-for-Recommender-Systems/" class="article-date">
-  <time datetime="2020-12-25T20:47:32.000Z" itemprop="datePublished">2020-12-25</time>
+    <a href="/2020/12/25/Leetcode-124-Binary-Tree-Maximum-Path-Sum/" class="article-date">
+  <time datetime="2020-12-25T14:42:28.000Z" itemprop="datePublished">2020-12-25</time>
 </a>
     
   </div>
@@ -90,7 +88,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Reading Note for  Wide and Deep Learning for Recommender Systems
+      Leetcode 124: Binary Tree Maximum Path Sum
     </h1>
   
 
@@ -98,31 +96,37 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><strong>Paper link</strong>: <a target="_blank" rel="noopener" href="https://arxiv.org/pdf/1606.07792.pdf">Wide &amp; Deep Learning for Recommender Systems</a></p>
-<h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><ul>
-<li>The input features are sparse</li>
-<li>Memorization of feature interactions through a wide set of <strong>cross-product</strong> feature transformations are effective and interpretable. However, generalization requires more feature engineering effort.</li>
-<li>Deep neural networks can generalize better to unseen feature combinations through <strong>low-dimensional dense embeddings</strong> learned from the sparse features.</li>
-<li>Therefore, this paper combines two: jointly train wide linear models and deep neural networks.</li>
+        <p>Hard</p>
+<p>Given a non-empty binary tree, find the maximum path sum.</p>
+<p>For this problem, a path is defined as any node sequence from some starting node to any node in the tree along the parent-child connections. The path must contain at least one node and does not need to go through the root.</p>
+<p><strong>Example 1</strong>:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">  1</span><br><span class="line"> &#x2F; \</span><br><span class="line">2   3</span><br></pre></td></tr></table></figure><br><strong>Input</strong>: root = [1,2,3]<br><strong>Output</strong>: 6</p>
+<p><strong>Constraints</strong>:</p>
+<ul>
+<li>The number of nodes in the tree is in the range [0, 3 * 10^4]</li>
+<li>-1000 &lt;= Node.val &lt;= 1000</li>
 </ul>
-<h2 id="Model-Architecture"><a href="#Model-Architecture" class="headerlink" title="Model Architecture"></a>Model Architecture</h2><p><img src="https://1.bp.blogspot.com/-Dw1mB9am1l8/V3MgtOzp3uI/AAAAAAAABGs/mP-3nZQCjWwdk6qCa5WraSpK8A7rSPj3ACLcB/s1600/image04.png" alt="Image"></p>
-<h3 id="Wide-Component"><a href="#Wide-Component" class="headerlink" title="Wide Component"></a>Wide Component</h3><ul>
-<li>Assume y is the prediction and <strong>x</strong> is a vector of d features. The wide component is a generalized linear model of the form <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">y &#x3D; w^T x + b</span><br></pre></td></tr></table></figure></li>
-<li>One of the most important transformations is the <strong>cross-product</strong> transformation. For binary features, a cross-product transformation “AND( gender=male, language=en)” is 1 only if gender is male and language is en.</li>
+<p><strong>Solution</strong>:</p>
+<ul>
+<li>Get the inorder tree traversal: Recursive or Iterative way </li>
+<li><p>Find the maximum summation of sub-array</p>
+<ul>
+<li>DP: get the maximum summation of the subarray ending with the curent element </li>
+<li>dp[i+1] = max(dp[i],0) + nums[i+1]</li>
 </ul>
-<p><img src="https://miro.medium.com/max/700/1*XHvOuICw2E9inCJJxIyKUg.png" alt="image"></p>
-<h3 id="Deep-Componennt"><a href="#Deep-Componennt" class="headerlink" title="Deep Componennt"></a>Deep Componennt</h3><ul>
-<li>Each of these sparse high-dimensional categorical features are first converted into a low-dimensional and dense real-valued vector</li>
-<li>Those low-dimensional vectors are then fed into a hidden layers and a neural network</li>
+</li>
+<li><p>For this problem, we can use the similar idea. Traversal the tree and max value is the max(lef, right, left+node.val+right)</p>
+</li>
+<li>the DP idea: the maximum summation of path values starting or ending with the node: max(node.val + max(left,right),0)</li>
 </ul>
-<h3 id="Application"><a href="#Application" class="headerlink" title="Application"></a>Application</h3>
+<p><strong>Recursive Inorder code</strong>:<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">maxPathSum</span>(<span class="params">self, root</span>):</span></span><br><span class="line">        <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">        :type root: TreeNode</span></span><br><span class="line"><span class="string">        :rtype: int</span></span><br><span class="line"><span class="string">        &quot;&quot;&quot;</span></span><br><span class="line">        <span class="function"><span class="keyword">def</span> <span class="title">maxend</span>(<span class="params">node</span>):</span></span><br><span class="line">            <span class="keyword">if</span> <span class="keyword">not</span> node:</span><br><span class="line">                <span class="keyword">return</span> <span class="number">0</span></span><br><span class="line">            left = maxend(node.left)</span><br><span class="line">            right = maxend(node.right)</span><br><span class="line">            self.<span class="built_in">max</span> = <span class="built_in">max</span>(self.<span class="built_in">max</span>, left + node.val + right)</span><br><span class="line">            <span class="keyword">return</span> <span class="built_in">max</span>(node.val + <span class="built_in">max</span>(left, right), <span class="number">0</span>)</span><br><span class="line">        self.<span class="built_in">max</span> = -<span class="built_in">float</span>(<span class="string">&#x27;inf&#x27;</span>)</span><br><span class="line">        maxend(root)</span><br><span class="line">        <span class="keyword">return</span> self.<span class="built_in">max</span></span><br></pre></td></tr></table></figure></p>
+
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://hjsang.github.io/2020/12/25/Wide-and-Deep-Learning-for-Recommender-Systems/" data-id="ckj4rzm1j000clwu281wvet9z" class="article-share-link">Share</a>
+      <a data-url="http://hjsang.github.io/2020/12/25/Leetcode-124-Binary-Tree-Maximum-Path-Sum/" data-id="ckj4rxz2x0006j6u22lzod8ak" class="article-share-link">Share</a>
       
       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/source/tags/deep-learning/" rel="tag">deep learning</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/source/tags/paper/" rel="tag">paper</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/source/tags/recommender-system/" rel="tag">recommender system</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/source/tags/Binary-Tree/" rel="tag">Binary Tree</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/source/tags/Leetcode/" rel="tag">Leetcode</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/source/tags/Tree/" rel="tag">Tree</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/source/tags/Tree-Traversal/" rel="tag">Tree Traversal</a></li></ul>
 
     </footer>
   </div>
@@ -130,10 +134,19 @@
     
 <nav id="article-nav">
   
+    <a href="/2020/12/25/Leetcode-105-Construct-Binary-Tree-from-Preorder-and-InorderTraversal/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Leetcode 105: Construct Binary Tree from Preorder and InorderTraversal
+        
+      </div>
+    </a>
   
-    <a href="/2020/12/25/Leetcode-105-Construct-Binary-Tree-from-Preorder-and-InorderTraversal/" id="article-nav-older" class="article-nav-link-wrap">
+  
+    <a href="/2020/12/24/Leetcode-297-Serialize-and-Deserialize-Binary-Tree/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Leetcode 105: Construct Binary Tree from Preorder and InorderTraversal</div>
+      <div class="article-nav-title">Leetcode 297: Serialize and Deserialize Binary Tree</div>
     </a>
   
 </nav>

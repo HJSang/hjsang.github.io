@@ -103,10 +103,14 @@
 <h2 id="Model-Architecture"><a href="#Model-Architecture" class="headerlink" title="Model Architecture"></a>Model Architecture</h2><p><img src="https://1.bp.blogspot.com/-Dw1mB9am1l8/V3MgtOzp3uI/AAAAAAAABGs/mP-3nZQCjWwdk6qCa5WraSpK8A7rSPj3ACLcB/s1600/image04.png" alt="Image"></p>
 <h3 id="Wide-Component"><a href="#Wide-Component" class="headerlink" title="Wide Component"></a>Wide Component</h3><ul>
 <li>Assume y is the prediction and <strong>x</strong> is a vector of d features. The wide component is a generalized linear model of the form <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">y &#x3D; w^T x + b</span><br></pre></td></tr></table></figure></li>
-<li>One of the most important transformations is the <strong>cross-product</strong> transformation, which is defined as:<script type="math/tex; mode=display">
-\phi_k(\bm{x})</script></li>
+<li>One of the most important transformations is the <strong>cross-product</strong> transformation. For binary features, a cross-product transformation “AND( gender=male, language=en)” is 1 only if gender is male and language is en.</li>
 </ul>
-
+<p><img src="https://miro.medium.com/max/700/1*XHvOuICw2E9inCJJxIyKUg.png" alt="image"></p>
+<h3 id="Deep-Componennt"><a href="#Deep-Componennt" class="headerlink" title="Deep Componennt"></a>Deep Componennt</h3><ul>
+<li>Each of these sparse high-dimensional categorical features are first converted into a low-dimensional and dense real-valued vector</li>
+<li>Those low-dimensional vectors are then fed into a hidden layers and a neural network</li>
+</ul>
+<h3 id="Application"><a href="#Application" class="headerlink" title="Application"></a>Application</h3>
       
     </div>
     <footer class="article-footer">
