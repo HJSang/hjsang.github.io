@@ -6,7 +6,7 @@
   <link href="http://hjsang.github.io/atom.xml" rel="self"/>
   
   <link href="http://hjsang.github.io/"/>
-  <updated>2021-01-04T20:51:51.376Z</updated>
+  <updated>2021-01-04T21:39:43.475Z</updated>
   <id>http://hjsang.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Leetcode 1209: Remove All Adjacent Duplicates in String II</title>
+    <link href="http://hjsang.github.io/2021/01/04/Leetcode-1209-Remove-All-Adjacent-Duplicates-in-String-II/"/>
+    <id>http://hjsang.github.io/2021/01/04/Leetcode-1209-Remove-All-Adjacent-Duplicates-in-String-II/</id>
+    <published>2021-01-04T21:26:35.000Z</published>
+    <updated>2021-01-04T21:39:43.475Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;Medium &lt;/p&gt;
+&lt;p&gt;Given a string s, a k</summary>
+        
+      
+    
+    
+    
+    
+    <category term="Leetcode" scheme="http://hjsang.github.io/source/tags/Leetcode/"/>
+    
+    <category term="Stack" scheme="http://hjsang.github.io/source/tags/Stack/"/>
+    
+  </entry>
   
   <entry>
     <title>Leetcode 224: Basic Calculator</title>
