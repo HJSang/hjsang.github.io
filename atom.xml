@@ -6,7 +6,7 @@
   <link href="http://hjsang.github.io/atom.xml" rel="self"/>
   
   <link href="http://hjsang.github.io/"/>
-  <updated>2021-01-04T19:09:11.828Z</updated>
+  <updated>2021-01-04T20:51:51.376Z</updated>
   <id>http://hjsang.github.io/</id>
   
   <author>
@@ -17,11 +17,115 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Leetcode 224: Basic Calculator</title>
+    <link href="http://hjsang.github.io/2021/01/04/Leetcode-224-Basic-Calculator/"/>
+    <id>http://hjsang.github.io/2021/01/04/Leetcode-224-Basic-Calculator/</id>
+    <published>2021-01-04T20:48:19.000Z</published>
+    <updated>2021-01-04T20:51:51.376Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;Hard&lt;/p&gt;
+&lt;p&gt;Given a string s</summary>
+        
+      
+    
+    
+    
+    
+    <category term="Leetcode" scheme="http://hjsang.github.io/source/tags/Leetcode/"/>
+    
+    <category term="Stack" scheme="http://hjsang.github.io/source/tags/Stack/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Leetcode 227: Basic Calculator II</title>
+    <link href="http://hjsang.github.io/2021/01/04/Leetcode-227-Basic-Calculator-II/"/>
+    <id>http://hjsang.github.io/2021/01/04/Leetcode-227-Basic-Calculator-II/</id>
+    <published>2021-01-04T19:56:59.000Z</published>
+    <updated>2021-01-04T20:47:43.025Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;Medium&lt;/p&gt;
+&lt;p&gt;Given a string s which</summary>
+        
+      
+    
+    
+    
+    
+    <category term="Leetcode" scheme="http://hjsang.github.io/source/tags/Leetcode/"/>
+    
+    <category term="Stack" scheme="http://hjsang.github.io/source/tags/Stack/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Leetcode 1249: Minimum Remove to Make Valid Parentheses</title>
+    <link href="http://hjsang.github.io/2021/01/04/Leetcode-1249-Minimum-Remove-to-Make-Valid-Parentheses/"/>
+    <id>http://hjsang.github.io/2021/01/04/Leetcode-1249-Minimum-Remove-to-Make-Valid-Parentheses/</id>
+    <published>2021-01-04T19:38:39.000Z</published>
+    <updated>2021-01-04T19:56:23.995Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;Medium&lt;/p&gt;
+&lt;p&gt;Given a string s of</summary>
+        
+      
+    
+    
+    
+    
+    <category term="Leetcode" scheme="http://hjsang.github.io/source/tags/Leetcode/"/>
+    
+    <category term="Stack" scheme="http://hjsang.github.io/source/tags/Stack/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Leetcode 394: Decode String</title>
+    <link href="http://hjsang.github.io/2021/01/04/Leetcode-394-Decode-String/"/>
+    <id>http://hjsang.github.io/2021/01/04/Leetcode-394-Decode-String/</id>
+    <published>2021-01-04T19:11:05.000Z</published>
+    <updated>2021-01-04T19:38:06.714Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;Medium &lt;/p&gt;
+&lt;p&gt;Given an encoded</summary>
+        
+      
+    
+    
+    
+    
+    <category term="Leetcode" scheme="http://hjsang.github.io/source/tags/Leetcode/"/>
+    
+    <category term="Stack" scheme="http://hjsang.github.io/source/tags/Stack/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Leetcode 42: Trapping Rain Water</title>
     <link href="http://hjsang.github.io/2021/01/04/Leetcode-42-Trapping-Rain-Water/"/>
     <id>http://hjsang.github.io/2021/01/04/Leetcode-42-Trapping-Rain-Water/</id>
     <published>2021-01-04T18:13:22.000Z</published>
-    <updated>2021-01-04T19:09:11.828Z</updated>
+    <updated>2021-01-04T19:10:42.290Z</updated>
     
     
       
@@ -38,7 +142,9 @@
     
     <category term="LeetCode" scheme="http://hjsang.github.io/source/tags/LeetCode/"/>
     
-    <category term="two pointers" scheme="http://hjsang.github.io/source/tags/two-pointers/"/>
+    <category term="Stack" scheme="http://hjsang.github.io/source/tags/Stack/"/>
+    
+    <category term="Two pointers" scheme="http://hjsang.github.io/source/tags/Two-pointers/"/>
     
   </entry>
   

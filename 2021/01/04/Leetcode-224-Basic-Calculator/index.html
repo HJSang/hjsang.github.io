@@ -5,22 +5,20 @@
   
 
   
-  <title>Reading Note: Improving Web Search Ranking by Incorporating User Behavior Information | 学习笔记</title>
+  <title>Leetcode 224: Basic Calculator | 学习笔记</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Introduction This paper explores whether implicit feedback can be helpful in realistic environments, where user feedback can be noisy and a web search engine already uses hundreds of features and is h">
+  <meta name="description" content="Hard Given a string s representing an expression, implement a basic calculator to evaluate it. Example 1:12Input: s &#x3D; &quot;1 + 1&quot;Output: 2 Example 2:12Input: s &#x3D; &quot; 2-1 + 2 &quot;O">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Reading Note: Improving Web Search Ranking by Incorporating User Behavior Information">
-<meta property="og:url" content="http://hjsang.github.io/2020/12/23/Reading-Note-Improving-Web-Search-Ranking-by-Incorporating-User-Behavior-Information/index.html">
+<meta property="og:title" content="Leetcode 224: Basic Calculator">
+<meta property="og:url" content="http://hjsang.github.io/2021/01/04/Leetcode-224-Basic-Calculator/index.html">
 <meta property="og:site_name" content="学习笔记">
-<meta property="og:description" content="Introduction This paper explores whether implicit feedback can be helpful in realistic environments, where user feedback can be noisy and a web search engine already uses hundreds of features and is h">
+<meta property="og:description" content="Hard Given a string s representing an expression, implement a basic calculator to evaluate it. Example 1:12Input: s &#x3D; &quot;1 + 1&quot;Output: 2 Example 2:12Input: s &#x3D; &quot; 2-1 + 2 &quot;O">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2020-12-23T16:08:03.000Z">
-<meta property="article:modified_time" content="2020-12-24T14:52:12.545Z">
+<meta property="article:published_time" content="2021-01-04T20:48:19.000Z">
+<meta property="article:modified_time" content="2021-01-04T20:51:51.376Z">
 <meta property="article:author" content="Hejian Sang">
-<meta property="article:tag" content="Web Search">
-<meta property="article:tag" content="Implicit relevance feedback">
-<meta property="article:tag" content="Web search ranking">
-<meta property="article:tag" content="Paper reading notes">
+<meta property="article:tag" content="Leetcode">
+<meta property="article:tag" content="Stack">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternate" href="/atom.xml" title="学习笔记" type="application/atom+xml">
@@ -74,10 +72,10 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-Reading-Note-Improving-Web-Search-Ranking-by-Incorporating-User-Behavior-Information" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-Leetcode-224-Basic-Calculator" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2020/12/23/Reading-Note-Improving-Web-Search-Ranking-by-Incorporating-User-Behavior-Information/" class="article-date">
-  <time datetime="2020-12-23T16:08:03.000Z" itemprop="datePublished">2020-12-23</time>
+    <a href="/2021/01/04/Leetcode-224-Basic-Calculator/" class="article-date">
+  <time datetime="2021-01-04T20:48:19.000Z" itemprop="datePublished">2021-01-04</time>
 </a>
     
   </div>
@@ -88,7 +86,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Reading Note: Improving Web Search Ranking by Incorporating User Behavior Information
+      Leetcode 224: Basic Calculator
     </h1>
   
 
@@ -96,41 +94,26 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p> This paper explores whether implicit feedback can be helpful in realistic environments, where user feedback can be noisy and a web search engine already uses hundreds of features and is heavily tuned.</p>
-<p> <strong>Contributions</strong>:</p>
+        <p>Hard</p>
+<p>Given a string s representing an expression, implement a basic calculator to evaluate it.</p>
+<p><strong>Example 1</strong>:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: s &#x3D; &quot;1 + 1&quot;</span><br><span class="line">Output: 2</span><br></pre></td></tr></table></figure></p>
+<p><strong>Example 2</strong>:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: s &#x3D; &quot; 2-1 + 2 &quot;</span><br><span class="line">Output: 3</span><br></pre></td></tr></table></figure></p>
+<p><strong>Example 3</strong>:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: s &#x3D; &quot;(1+(4+5+2)-3)+(6+8)&quot;</span><br><span class="line">Output: 23</span><br></pre></td></tr></table></figure></p>
+<p><strong>Constraints</strong>:</p>
 <ul>
-<li>Analysis of alternatives for incoporating user behavior into web search ranking</li>
-<li>An application of a robust implicit feedback model</li>
-<li>A large scale evaluation</li>
+<li>1 &lt;= s.length &lt;= 3 * 105</li>
+<li>s consists of digits, ‘+’, ‘-‘, ‘(‘, ‘)’, and ‘ ‘.</li>
+<li>s represents a valid expression.</li>
 </ul>
-<h2 id="Incorporating-Implicit-Feedback"><a href="#Incorporating-Implicit-Feedback" class="headerlink" title="Incorporating Implicit Feedback"></a>Incorporating Implicit Feedback</h2><ul>
-<li><p><strong>Treating implicit feedback as independent evidence for ranking results</strong>:</p>
-<ul>
-<li>Re-rank the results obtained by a web search engine </li>
-<li>Each result is assigned a score according to expected relevance/user satisfaction</li>
-<li>For a given query <strong>q</strong>, the implicit score $IS_d$ is computed for each result $d$ from available user interaction features</li>
-<li>The implicit score results in the implicit rank $I_d$ for each result</li>
-<li>The original score rank is $O_d$</li>
-<li>We compute the merged score: $S_M(d)= w_I \frac{1}{I_d+1}+\frac{1}{O_d+1}$ if implicit feedback exists for $d$.</li>
-<li>Otherwise, $S_M(d) = \frac{1}{O_d}$</li>
-</ul>
-</li>
-<li><p><strong>Ranking with implicit feedback features</strong>:</p>
-<ul>
-<li>Incorporate implicit feedback features directly as features for the ranking algorithm.</li>
-<li>This model requires a ranking algorithm to be robust to missing values: more than 50% of queries are unique( without previous implicit feedback)</li>
-<li>Use a 2-layer implementation of RankNet in order to model non-linear relationships between features.</li>
-</ul>
-</li>
-</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">calculate</span>(<span class="params">self, s: <span class="built_in">str</span></span>) -&gt; int:</span></span><br><span class="line">        res, num, stack, sign = <span class="number">0</span>,<span class="number">0</span>,[],<span class="number">1</span></span><br><span class="line">        <span class="keyword">for</span> c <span class="keyword">in</span> s:</span><br><span class="line">            <span class="keyword">if</span> c.isdigit():</span><br><span class="line">                num = <span class="number">10</span>*num +<span class="built_in">int</span>(c)</span><br><span class="line">            <span class="keyword">elif</span> c==<span class="string">&quot;+&quot;</span>:</span><br><span class="line">                res += sign*num</span><br><span class="line">                num=<span class="number">0</span></span><br><span class="line">                sign=<span class="number">1</span></span><br><span class="line">            <span class="keyword">elif</span> c==<span class="string">&quot;-&quot;</span>:</span><br><span class="line">                res += sign*num</span><br><span class="line">                num=<span class="number">0</span></span><br><span class="line">                sign=-<span class="number">1</span></span><br><span class="line">            <span class="keyword">elif</span> c==<span class="string">&quot;(&quot;</span>:</span><br><span class="line">                stack.append(res)</span><br><span class="line">                stack.append(sign)</span><br><span class="line">                res=<span class="number">0</span></span><br><span class="line">                sign=<span class="number">1</span></span><br><span class="line">            <span class="keyword">elif</span> c==<span class="string">&quot;)&quot;</span>:</span><br><span class="line">                prev_sign = stack.pop()</span><br><span class="line">                prev_res = stack.pop()</span><br><span class="line">                res+=sign*num</span><br><span class="line">                res = prev_res + prev_sign*(res)</span><br><span class="line">                num=<span class="number">0</span></span><br><span class="line">        <span class="keyword">return</span> res+sign*num</span><br></pre></td></tr></table></figure>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://hjsang.github.io/2020/12/23/Reading-Note-Improving-Web-Search-Ranking-by-Incorporating-User-Behavior-Information/" data-id="ckj4sm31g000brdu2hxnzbb9y" class="article-share-link">Share</a>
+      <a data-url="http://hjsang.github.io/2021/01/04/Leetcode-224-Basic-Calculator/" data-id="ckjj1hu810001epu2dxcrbgz1" class="article-share-link">Share</a>
       
       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/source/tags/Implicit-relevance-feedback/" rel="tag">Implicit relevance feedback</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/source/tags/Paper-reading-notes/" rel="tag">Paper reading notes</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/source/tags/Web-Search/" rel="tag">Web Search</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/source/tags/Web-search-ranking/" rel="tag">Web search ranking</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/source/tags/Leetcode/" rel="tag">Leetcode</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/source/tags/Stack/" rel="tag">Stack</a></li></ul>
 
     </footer>
   </div>
@@ -138,19 +121,10 @@
     
 <nav id="article-nav">
   
-    <a href="/2020/12/24/Leetcode-297-Serialize-and-Deserialize-Binary-Tree/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          Leetcode 297: Serialize and Deserialize Binary Tree
-        
-      </div>
-    </a>
   
-  
-    <a href="/2020/12/23/Leetcode-199-Binary-Tree-Right-Side-View/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2021/01/04/Leetcode-227-Basic-Calculator-II/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Leetcode 199: Binary Tree Right Side View</div>
+      <div class="article-nav-title">Leetcode 227: Basic Calculator II</div>
     </a>
   
 </nav>
