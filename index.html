@@ -71,6 +71,85 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-Note-for-Deep-Crossing" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2021/01/16/Note-for-Deep-Crossing/" class="article-date">
+  <time datetime="2021-01-16T18:22:57.000Z" itemprop="datePublished">2021-01-16</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/01/16/Note-for-Deep-Crossing/">Note for Deep Crossing</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="References"><a href="#References" class="headerlink" title="References"></a>References</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://www.kdd.org/kdd2016/papers/files/adf0975-shanA.pdf">Deep Crossing: Web-Scale Modeling without Manually Crafted Combinatorial Features</a></li>
+</ul>
+<h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><ul>
+<li>Before Deep Crossing: manually design combinatorial features or use xgb to design features. Highy depend on experience and domain knlowedge.</li>
+<li>In this paper, the authors proposes the Deep Crossing model:<ul>
+<li>A deep neural network that automatically combines features to produce superior models</li>
+<li>The input is a set of individual features that can be either dense or sparse</li>
+<li>The important corssing features are discovered implicitly by the networks</li>
+</ul>
+</li>
+</ul>
+<h2 id="Sponsored-Search"><a href="#Sponsored-Search" class="headerlink" title="Sponsored Search"></a>Sponsored Search</h2><ul>
+<li>Deep Crossing is discussed in the context of <strong>sponsered search</strong>: showing ads alongside organic search results</li>
+<li>There are three major agents: the user, the advertiser and the search platform</li>
+<li>The below are the concepts ke y to the discussion:<ul>
+<li>Query: A text string a user types into the search box</li>
+<li>Keyword: A text string related to a product, specified by an advertiser to match a user query</li>
+<li>Title: The title of a sponsered advertisement</li>
+<li>Landing page: A product’s web site a user reahes when the corresponding ad is clicked by a user</li>
+<li>Match Type: An option given to the advertiser on how closely the keyword should be matched by a user query, usually one of four kinds:  exact, phrase, broad and contextual</li>
+<li>Campaign: A set of ads that share the same setting such as budget and location targeting, often used to organize products into categories</li>
+<li>Impression: An instance of an ad being displayed to a user. An impression is usually logged with other information available at the run-time</li>
+<li>Click: An indication of whether an impression was clicked by a user.</li>
+<li>Click through rate: Total number of clicks over total number of impressions</li>
+<li>click Prediction: A critical model of the platform that predicts the likelihood a user clicks on a given ad for a given query</li>
+</ul>
+</li>
+</ul>
+<h2 id="Feature-representation"><a href="#Feature-representation" class="headerlink" title="Feature representation"></a>Feature representation</h2><h3 id="Individual-features"><a href="#Individual-features" class="headerlink" title="Individual features"></a>Individual features</h3><ul>
+<li>Forr text features such as a query, one option is to convert the string into a tri-letter gram with 49, 292 dimensions</li>
+<li>Categorical input is represented by a one-hot vector</li>
+<li>There are usually millions of campaigns in a sponsered search system. one hot vector would significnatly increase the size of the model. One solution is to use a pair of compaign features as exemplified in the table (For example, only the top 10K cmpaigns with the highest numberof clicks)</li>
+</ul>
+<h2 id="Model-architecture"><a href="#Model-architecture" class="headerlink" title="Model architecture"></a>Model architecture</h2><p><img src="https://dos-tacos.github.io/images/syleeie/2019-07-21/deepcrossing.png" alt="image"></p>
+<h3 id="Embedding-and-Stacking-layers"><a href="#Embedding-and-Stacking-layers" class="headerlink" title="Embedding and Stacking layers"></a>Embedding and Stacking layers</h3><ul>
+<li>Embedding is applied per individual feature to transform the input features</li>
+<li>The stacking layer is to concate them into one vector </li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/HJSang/hjsang.github.io/main/medias/image/deep_cross1.png" alt="image"></p>
+<h3 id="Residual-layer"><a href="#Residual-layer" class="headerlink" title="Residual layer"></a>Residual layer</h3><p><img src="https://raw.githubusercontent.com/HJSang/hjsang.github.io/main/medias/image/deep_cross2.png" alt="image"></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://hjsang.github.io/2021/01/16/Note-for-Deep-Crossing/" data-id="ckk02ywt70000eru27xnc836z" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/source/tags/CTR-prediction/" rel="tag">CTR prediction</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/source/tags/Deep-Crossing/" rel="tag">Deep Crossing</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/source/tags/Recommendation-system/" rel="tag">Recommendation system</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-Note-for-AutoRec-Autoencoders-Meet-Collaborative-Filtering" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2021/01/16/Note-for-AutoRec-Autoencoders-Meet-Collaborative-Filtering/" class="article-date">
@@ -124,6 +203,9 @@
 <p><img src="https://raw.githubusercontent.com/HJSang/hjsang.github.io/main/medias/image/auto_rec.png" alt="image"></p>
 <p>The loss function is: </p>
 <p><img src="https://raw.githubusercontent.com/HJSang/hjsang.github.io/main/medias/image/auto_rec2.png" alt="image"></p>
+<h2 id="References"><a href="#References" class="headerlink" title="References"></a>References</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://github.com/gtshs2/Autorec/blob/master/AutoRec.py">Implementation AutoRec</a></li>
+</ul>
 
       
     </div>
@@ -366,68 +448,11 @@
 
 
   
-    <article id="post-Leetcode-1249-Minimum-Remove-to-Make-Valid-Parentheses" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2021/01/04/Leetcode-1249-Minimum-Remove-to-Make-Valid-Parentheses/" class="article-date">
-  <time datetime="2021-01-04T19:38:39.000Z" itemprop="datePublished">2021-01-04</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/01/04/Leetcode-1249-Minimum-Remove-to-Make-Valid-Parentheses/">Leetcode 1249: Minimum Remove to Make Valid Parentheses</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Medium</p>
-<p>Given a string s of ‘(‘ , ‘)’ and lowercase English characters.</p>
-<p>Your task is to remove the minimum number of parentheses ( ‘(‘ or ‘)’, in any positions ) so that the resulting parentheses string is valid and return any valid string.</p>
-<p>Formally, a parentheses string is valid if and only if:</p>
-<ul>
-<li>It is the empty string, contains only lowercase characters, or</li>
-<li>It can be written as AB (A concatenated with B), where A and B are valid strings, or</li>
-<li>It can be written as (A), where A is a valid string.</li>
-</ul>
-<p><strong>Example 1</strong>:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Input: s &#x3D; &quot;lee(t(c)o)de)&quot;</span><br><span class="line">Output: &quot;lee(t(c)o)de&quot;</span><br><span class="line">Explanation: &quot;lee(t(co)de)&quot; , &quot;lee(t(c)ode)&quot; would also be accepted.</span><br></pre></td></tr></table></figure></p>
-<p><strong>Example 2</strong>:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: s &#x3D; &quot;a)b(c)d&quot;</span><br><span class="line">Output: &quot;ab(c)d&quot;</span><br></pre></td></tr></table></figure></p>
-<p><strong>Example 3</strong>:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Input: s &#x3D; &quot;))((&quot;</span><br><span class="line">Output: &quot;&quot;</span><br><span class="line">Explanation: An empty string is also valid.</span><br></pre></td></tr></table></figure></p>
-<p><strong>Example 4</strong>:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: s &#x3D; &quot;(a(b(c)d)&quot;</span><br><span class="line">Output: &quot;a(b(c)d)&quot;</span><br></pre></td></tr></table></figure></p>
-<p><strong>Constraints</strong>:</p>
-<ul>
-<li>1 &lt;= s.length &lt;= 10^5</li>
-<li>s[i] is one of  ‘(‘ , ‘)’ and lowercase English letters.</li>
-</ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">minRemoveToMakeValid</span>(<span class="params">self, s: <span class="built_in">str</span></span>) -&gt; str:</span></span><br><span class="line">        stack = []</span><br><span class="line">        remove = []</span><br><span class="line">        <span class="keyword">for</span> index, val <span class="keyword">in</span> <span class="built_in">enumerate</span>(s):</span><br><span class="line">            <span class="keyword">if</span> val == <span class="string">&quot;(&quot;</span>:</span><br><span class="line">                stack.append(index)</span><br><span class="line">            <span class="keyword">elif</span> val == <span class="string">&quot;)&quot;</span> <span class="keyword">and</span> stack:</span><br><span class="line">                stack.pop()</span><br><span class="line">            <span class="keyword">elif</span> val == <span class="string">&quot;)&quot;</span>:</span><br><span class="line">                remove.append(index)</span><br><span class="line"></span><br><span class="line">        res = <span class="string">&quot;&quot;</span></span><br><span class="line">        ind = <span class="built_in">list</span>(<span class="built_in">range</span>(<span class="built_in">len</span>(s)))</span><br><span class="line">        ind = [i <span class="keyword">for</span> i <span class="keyword">in</span> ind <span class="keyword">if</span> i <span class="keyword">not</span> <span class="keyword">in</span> remove+stack]</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> ind:</span><br><span class="line">            res += s[i]</span><br><span class="line">        <span class="keyword">return</span> res</span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://hjsang.github.io/2021/01/04/Leetcode-1249-Minimum-Remove-to-Make-Valid-Parentheses/" data-id="ckjj1hu7p0000epu21evq5svj" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/source/tags/Leetcode/" rel="tag">Leetcode</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/source/tags/Stack/" rel="tag">Stack</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
 
 
   <nav id="page-nav">
     
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/">下一页 &amp;raquo;</a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/2/">下一页 &amp;raquo;</a>
   </nav>
 
 </section>
@@ -441,7 +466,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">标签</h3>
     <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/source/tags/Algorithm/" rel="tag">Algorithm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/source/tags/BFS/" rel="tag">BFS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/source/tags/Binary-Search/" rel="tag">Binary Search</a></li><li class="tag-list-item"><a class="tag-list-link" href="/source/tags/Binary-Tree/" rel="tag">Binary Tree</a></li><li class="tag-list-item"><a class="tag-list-link" href="/source/tags/CF/" rel="tag">CF</a></li><li class="tag-list-item"><a class="tag-list-link" href="/source/tags/CTR-prediction/" rel="tag">CTR prediction</a></li><li class="tag-list-item"><a class="tag-list-link" href="/source/tags/DFS/" rel="tag">DFS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/source/tags/Implicit-relevance-feedback/" rel="tag">Implicit relevance feedback</a></li><li class="tag-list-item"><a class="tag-list-link" href="/source/tags/LeetCode/" rel="tag">LeetCode</a></li><li class="tag-list-item"><a class="tag-list-link" href="/source/tags/Leetcode/" rel="tag">Leetcode</a></li><li class="tag-list-item"><a class="tag-list-link" href="/source/tags/Paper-reading-notes/" rel="tag">Paper reading notes</a></li><li class="tag-list-item"><a class="tag-list-link" href="/source/tags/Recommendation-system/" rel="tag">Recommendation system</a></li><li class="tag-list-item"><a class="tag-list-link" href="/source/tags/Stack/" rel="tag">Stack</a></li><li class="tag-list-item"><a class="tag-list-link" href="/source/tags/Traversal/" rel="tag">Traversal</a></li><li class="tag-list-item"><a class="tag-list-link" href="/source/tags/Tree/" rel="tag">Tree</a></li><li class="tag-list-item"><a class="tag-list-link" href="/source/tags/Tree-Traversal/" rel="tag">Tree Traversal</a></li><li class="tag-list-item"><a class="tag-list-link" href="/source/tags/Two-pointers/" rel="tag">Two pointers</a></li><li class="tag-list-item"><a class="tag-list-link" href="/source/tags/Web-Search/" rel="tag">Web Search</a></li><li class="tag-list-item"><a class="tag-list-link" href="/source/tags/Web-search-ranking/" rel="tag">Web search ranking</a></li><li class="tag-list-item"><a class="tag-list-link" href="/source/tags/Wide-Deep/" rel="tag">Wide & Deep</a></li><li class="tag-list-item"><a class="tag-list-link" href="/source/tags/bfs/" rel="tag">bfs</a></li><li class="tag-list-item"><a class="tag-list-link" href="/source/tags/data-science/" rel="tag">data science</a></li><li class="tag-list-item"><a class="tag-list-link" href="/source/tags/deep-learning/" rel="tag">deep learning</a></li><li class="tag-list-item"><a class="tag-list-link" href="/source/tags/dfs/" rel="tag">dfs</a></li><li class="tag-list-item"><a class="tag-list-link" href="/source/tags/pandas/" rel="tag">pandas</a></li><li class="tag-list-item"><a class="tag-list-link" href="/source/tags/paper/" rel="tag">paper</a></li><li class="tag-list-item"><a class="tag-list-link" href="/source/tags/recommender-system/" rel="tag">recommender system</a></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/source/tags/Algorithm/" rel="tag">Algorithm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/source/tags/BFS/" rel="tag">BFS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/source/tags/Binary-Search/" rel="tag">Binary Search</a></li><li class="tag-list-item"><a class="tag-list-link" href="/source/tags/Binary-Tree/" rel="tag">Binary Tree</a></li><li class="tag-list-item"><a class="tag-list-link" href="/source/tags/CF/" rel="tag">CF</a></li><li class="tag-list-item"><a class="tag-list-link" href="/source/tags/CTR-prediction/" rel="tag">CTR prediction</a></li><li class="tag-list-item"><a class="tag-list-link" href="/source/tags/DFS/" rel="tag">DFS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/source/tags/Deep-Crossing/" rel="tag">Deep Crossing</a></li><li class="tag-list-item"><a class="tag-list-link" href="/source/tags/Implicit-relevance-feedback/" rel="tag">Implicit relevance feedback</a></li><li class="tag-list-item"><a class="tag-list-link" href="/source/tags/LeetCode/" rel="tag">LeetCode</a></li><li class="tag-list-item"><a class="tag-list-link" href="/source/tags/Leetcode/" rel="tag">Leetcode</a></li><li class="tag-list-item"><a class="tag-list-link" href="/source/tags/Paper-reading-notes/" rel="tag">Paper reading notes</a></li><li class="tag-list-item"><a class="tag-list-link" href="/source/tags/Recommendation-system/" rel="tag">Recommendation system</a></li><li class="tag-list-item"><a class="tag-list-link" href="/source/tags/Stack/" rel="tag">Stack</a></li><li class="tag-list-item"><a class="tag-list-link" href="/source/tags/Traversal/" rel="tag">Traversal</a></li><li class="tag-list-item"><a class="tag-list-link" href="/source/tags/Tree/" rel="tag">Tree</a></li><li class="tag-list-item"><a class="tag-list-link" href="/source/tags/Tree-Traversal/" rel="tag">Tree Traversal</a></li><li class="tag-list-item"><a class="tag-list-link" href="/source/tags/Two-pointers/" rel="tag">Two pointers</a></li><li class="tag-list-item"><a class="tag-list-link" href="/source/tags/Web-Search/" rel="tag">Web Search</a></li><li class="tag-list-item"><a class="tag-list-link" href="/source/tags/Web-search-ranking/" rel="tag">Web search ranking</a></li><li class="tag-list-item"><a class="tag-list-link" href="/source/tags/Wide-Deep/" rel="tag">Wide & Deep</a></li><li class="tag-list-item"><a class="tag-list-link" href="/source/tags/bfs/" rel="tag">bfs</a></li><li class="tag-list-item"><a class="tag-list-link" href="/source/tags/data-science/" rel="tag">data science</a></li><li class="tag-list-item"><a class="tag-list-link" href="/source/tags/deep-learning/" rel="tag">deep learning</a></li><li class="tag-list-item"><a class="tag-list-link" href="/source/tags/dfs/" rel="tag">dfs</a></li><li class="tag-list-item"><a class="tag-list-link" href="/source/tags/pandas/" rel="tag">pandas</a></li><li class="tag-list-item"><a class="tag-list-link" href="/source/tags/paper/" rel="tag">paper</a></li><li class="tag-list-item"><a class="tag-list-link" href="/source/tags/recommender-system/" rel="tag">recommender system</a></li></ul>
     </div>
   </div>
 
@@ -451,7 +476,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">标签云</h3>
     <div class="widget tagcloud">
-      <a href="/source/tags/Algorithm/" style="font-size: 10px;">Algorithm</a> <a href="/source/tags/BFS/" style="font-size: 10px;">BFS</a> <a href="/source/tags/Binary-Search/" style="font-size: 10px;">Binary Search</a> <a href="/source/tags/Binary-Tree/" style="font-size: 10px;">Binary Tree</a> <a href="/source/tags/CF/" style="font-size: 10px;">CF</a> <a href="/source/tags/CTR-prediction/" style="font-size: 10px;">CTR prediction</a> <a href="/source/tags/DFS/" style="font-size: 10px;">DFS</a> <a href="/source/tags/Implicit-relevance-feedback/" style="font-size: 10px;">Implicit relevance feedback</a> <a href="/source/tags/LeetCode/" style="font-size: 12.5px;">LeetCode</a> <a href="/source/tags/Leetcode/" style="font-size: 20px;">Leetcode</a> <a href="/source/tags/Paper-reading-notes/" style="font-size: 10px;">Paper reading notes</a> <a href="/source/tags/Recommendation-system/" style="font-size: 12.5px;">Recommendation system</a> <a href="/source/tags/Stack/" style="font-size: 17.5px;">Stack</a> <a href="/source/tags/Traversal/" style="font-size: 10px;">Traversal</a> <a href="/source/tags/Tree/" style="font-size: 15px;">Tree</a> <a href="/source/tags/Tree-Traversal/" style="font-size: 10px;">Tree Traversal</a> <a href="/source/tags/Two-pointers/" style="font-size: 10px;">Two pointers</a> <a href="/source/tags/Web-Search/" style="font-size: 10px;">Web Search</a> <a href="/source/tags/Web-search-ranking/" style="font-size: 10px;">Web search ranking</a> <a href="/source/tags/Wide-Deep/" style="font-size: 10px;">Wide & Deep</a> <a href="/source/tags/bfs/" style="font-size: 10px;">bfs</a> <a href="/source/tags/data-science/" style="font-size: 10px;">data science</a> <a href="/source/tags/deep-learning/" style="font-size: 10px;">deep learning</a> <a href="/source/tags/dfs/" style="font-size: 10px;">dfs</a> <a href="/source/tags/pandas/" style="font-size: 10px;">pandas</a> <a href="/source/tags/paper/" style="font-size: 10px;">paper</a> <a href="/source/tags/recommender-system/" style="font-size: 10px;">recommender system</a>
+      <a href="/source/tags/Algorithm/" style="font-size: 10px;">Algorithm</a> <a href="/source/tags/BFS/" style="font-size: 10px;">BFS</a> <a href="/source/tags/Binary-Search/" style="font-size: 10px;">Binary Search</a> <a href="/source/tags/Binary-Tree/" style="font-size: 10px;">Binary Tree</a> <a href="/source/tags/CF/" style="font-size: 10px;">CF</a> <a href="/source/tags/CTR-prediction/" style="font-size: 12px;">CTR prediction</a> <a href="/source/tags/DFS/" style="font-size: 10px;">DFS</a> <a href="/source/tags/Deep-Crossing/" style="font-size: 10px;">Deep Crossing</a> <a href="/source/tags/Implicit-relevance-feedback/" style="font-size: 10px;">Implicit relevance feedback</a> <a href="/source/tags/LeetCode/" style="font-size: 12px;">LeetCode</a> <a href="/source/tags/Leetcode/" style="font-size: 20px;">Leetcode</a> <a href="/source/tags/Paper-reading-notes/" style="font-size: 10px;">Paper reading notes</a> <a href="/source/tags/Recommendation-system/" style="font-size: 14px;">Recommendation system</a> <a href="/source/tags/Stack/" style="font-size: 18px;">Stack</a> <a href="/source/tags/Traversal/" style="font-size: 10px;">Traversal</a> <a href="/source/tags/Tree/" style="font-size: 16px;">Tree</a> <a href="/source/tags/Tree-Traversal/" style="font-size: 10px;">Tree Traversal</a> <a href="/source/tags/Two-pointers/" style="font-size: 10px;">Two pointers</a> <a href="/source/tags/Web-Search/" style="font-size: 10px;">Web Search</a> <a href="/source/tags/Web-search-ranking/" style="font-size: 10px;">Web search ranking</a> <a href="/source/tags/Wide-Deep/" style="font-size: 10px;">Wide & Deep</a> <a href="/source/tags/bfs/" style="font-size: 10px;">bfs</a> <a href="/source/tags/data-science/" style="font-size: 10px;">data science</a> <a href="/source/tags/deep-learning/" style="font-size: 10px;">deep learning</a> <a href="/source/tags/dfs/" style="font-size: 10px;">dfs</a> <a href="/source/tags/pandas/" style="font-size: 10px;">pandas</a> <a href="/source/tags/paper/" style="font-size: 10px;">paper</a> <a href="/source/tags/recommender-system/" style="font-size: 10px;">recommender system</a>
     </div>
   </div>
 
@@ -473,6 +498,10 @@
       <ul>
         
           <li>
+            <a href="/2021/01/16/Note-for-Deep-Crossing/">Note for Deep Crossing</a>
+          </li>
+        
+          <li>
             <a href="/2021/01/16/Note-for-AutoRec-Autoencoders-Meet-Collaborative-Filtering/">Note for AutoRec: Autoencoders Meet Collaborative Filtering</a>
           </li>
         
@@ -486,10 +515,6 @@
         
           <li>
             <a href="/2021/01/04/Leetcode-224-Basic-Calculator/">Leetcode 224: Basic Calculator</a>
-          </li>
-        
-          <li>
-            <a href="/2021/01/04/Leetcode-227-Basic-Calculator-II/">Leetcode 227: Basic Calculator II</a>
           </li>
         
       </ul>

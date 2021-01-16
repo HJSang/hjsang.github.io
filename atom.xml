@@ -6,7 +6,7 @@
   <link href="http://hjsang.github.io/atom.xml" rel="self"/>
   
   <link href="http://hjsang.github.io/"/>
-  <updated>2021-01-16T17:30:05.086Z</updated>
+  <updated>2021-01-16T19:05:02.096Z</updated>
   <id>http://hjsang.github.io/</id>
   
   <author>
@@ -17,11 +17,38 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Note for Deep Crossing</title>
+    <link href="http://hjsang.github.io/2021/01/16/Note-for-Deep-Crossing/"/>
+    <id>http://hjsang.github.io/2021/01/16/Note-for-Deep-Crossing/</id>
+    <published>2021-01-16T18:22:57.000Z</published>
+    <updated>2021-01-16T19:05:02.096Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;References&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    
+    <category term="Recommendation system" scheme="http://hjsang.github.io/source/tags/Recommendation-system/"/>
+    
+    <category term="CTR prediction" scheme="http://hjsang.github.io/source/tags/CTR-prediction/"/>
+    
+    <category term="Deep Crossing" scheme="http://hjsang.github.io/source/tags/Deep-Crossing/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Note for AutoRec: Autoencoders Meet Collaborative Filtering</title>
     <link href="http://hjsang.github.io/2021/01/16/Note-for-AutoRec-Autoencoders-Meet-Collaborative-Filtering/"/>
     <id>http://hjsang.github.io/2021/01/16/Note-for-AutoRec-Autoencoders-Meet-Collaborative-Filtering/</id>
     <published>2021-01-16T16:32:53.000Z</published>
-    <updated>2021-01-16T17:30:05.086Z</updated>
+    <updated>2021-01-16T18:22:14.609Z</updated>
     
     
       
