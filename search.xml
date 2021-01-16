@@ -4,6 +4,27 @@
   
     
     <entry>
+      <title>Note for AutoRec: Autoencoders Meet Collaborative Filtering</title>
+      <link href="2021/01/16/Note-for-AutoRec-Autoencoders-Meet-Collaborative-Filtering/"/>
+      <url>2021/01/16/Note-for-AutoRec-Autoencoders-Meet-Collaborative-Filtering/</url>
+      
+        <content type="html"><![CDATA[<h2 id="Setup"><a href="#Setup" class="headerlink" title="Setup"></a>Setup</h2><ul><li>The problem this paper solves: rating-based collabrative filtering:<ul><li>m users and n iterms</li><li>Each user can be represented by a partially observed vector</li><li>Each item can be represented by a partially observed vector</li><li>The aim of CF is to project the rating matrix to a low-dimension latent space</li><li>We can consider User latent space or Item latent space, which leads to UserCF and Item CF</li></ul></li></ul><ul><li><p>User CF</p><ul><li>Motivation: <strong>similar people will have similar taste</strong></li><li>Limitation: the user number m grows faster and the history of users is very sparse</li></ul></li><li><p>Item CF</p><ul><li>Motivation: <strong>Recommend similar item</strong></li><li>For example, Netflix recommends similar movies.</li><li>Use Item CF most cases</li></ul></li></ul><h2 id="Model"><a href="#Model" class="headerlink" title="Model"></a>Model</h2><p><img src="https://www.researchgate.net/profile/Lexing_Xie/publication/311491420/figure/fig1/AS:710737718689792@1546464485935/Item-based-AutoRec-model-We-use-plate-notation-to-indicate-that-there-are-n-copies-of.png" alt="image"></p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Recommendation system </tag>
+            
+            <tag> CF </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Note for Wide and Deep Learning for Recommendation Systems</title>
       <link href="2021/01/16/Note-for-Wide-and-Deep-Learning-for-Recommendation-Systems/"/>
       <url>2021/01/16/Note-for-Wide-and-Deep-Learning-for-Recommendation-Systems/</url>

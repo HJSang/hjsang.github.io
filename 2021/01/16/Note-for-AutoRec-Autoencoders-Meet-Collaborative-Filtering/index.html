@@ -5,27 +5,23 @@
   
 
   
-  <title>Note for Wide and Deep Learning for Recommendation Systems | 学习笔记</title>
+  <title>Note for AutoRec: Autoencoders Meet Collaborative Filtering | 学习笔记</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Paper Link Introduction Problem Statement:  Large-scale regression and classification probelms with sparse inputs.    Wide &amp; Deep model for joinly training feed-forward neutral networks with embed">
+  <meta name="description" content="Setup The problem this paper solves: rating-based collabrative filtering: m users and n iterms Each user can be represented by a partially observed vector Each item can be represented by a partially o">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Note for Wide and Deep Learning for Recommendation Systems">
-<meta property="og:url" content="http://hjsang.github.io/2021/01/16/Note-for-Wide-and-Deep-Learning-for-Recommendation-Systems/index.html">
+<meta property="og:title" content="Note for AutoRec: Autoencoders Meet Collaborative Filtering">
+<meta property="og:url" content="http://hjsang.github.io/2021/01/16/Note-for-AutoRec-Autoencoders-Meet-Collaborative-Filtering/index.html">
 <meta property="og:site_name" content="学习笔记">
-<meta property="og:description" content="Paper Link Introduction Problem Statement:  Large-scale regression and classification probelms with sparse inputs.    Wide &amp; Deep model for joinly training feed-forward neutral networks with embed">
+<meta property="og:description" content="Setup The problem this paper solves: rating-based collabrative filtering: m users and n iterms Each user can be represented by a partially observed vector Each item can be represented by a partially o">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://miro.medium.com/max/2400/1*XHvOuICw2E9inCJJxIyKUg.png">
-<meta property="og:image" content="https://miro.medium.com/max/700/1*c704nx973VSTAGhWnevIuA.png">
-<meta property="og:image" content="https://miro.medium.com/max/690/1*pUzvrJijGioaxv8Xv71Wvw.png">
-<meta property="og:image" content="https://1.bp.blogspot.com/-Dw1mB9am1l8/V3MgtOzp3uI/AAAAAAAABGs/mP-3nZQCjWwdk6qCa5WraSpK8A7rSPj3ACLcB/s1600/image04.png">
-<meta property="article:published_time" content="2021-01-16T14:30:05.000Z">
-<meta property="article:modified_time" content="2021-01-16T16:24:48.644Z">
+<meta property="og:image" content="https://www.researchgate.net/profile/Lexing_Xie/publication/311491420/figure/fig1/AS:710737718689792@1546464485935/Item-based-AutoRec-model-We-use-plate-notation-to-indicate-that-there-are-n-copies-of.png">
+<meta property="article:published_time" content="2021-01-16T16:32:53.000Z">
+<meta property="article:modified_time" content="2021-01-16T17:23:46.732Z">
 <meta property="article:author" content="Hejian Sang">
 <meta property="article:tag" content="Recommendation system">
-<meta property="article:tag" content="CTR prediction">
-<meta property="article:tag" content="Wide &amp; Deep">
+<meta property="article:tag" content="CF">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://miro.medium.com/max/2400/1*XHvOuICw2E9inCJJxIyKUg.png">
+<meta name="twitter:image" content="https://www.researchgate.net/profile/Lexing_Xie/publication/311491420/figure/fig1/AS:710737718689792@1546464485935/Item-based-AutoRec-model-We-use-plate-notation-to-indicate-that-there-are-n-copies-of.png">
   
     <link rel="alternate" href="/atom.xml" title="学习笔记" type="application/atom+xml">
   
@@ -78,10 +74,10 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-Note-for-Wide-and-Deep-Learning-for-Recommendation-Systems" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-Note-for-AutoRec-Autoencoders-Meet-Collaborative-Filtering" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2021/01/16/Note-for-Wide-and-Deep-Learning-for-Recommendation-Systems/" class="article-date">
-  <time datetime="2021-01-16T14:30:05.000Z" itemprop="datePublished">2021-01-16</time>
+    <a href="/2021/01/16/Note-for-AutoRec-Autoencoders-Meet-Collaborative-Filtering/" class="article-date">
+  <time datetime="2021-01-16T16:32:53.000Z" itemprop="datePublished">2021-01-16</time>
 </a>
     
   </div>
@@ -92,7 +88,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Note for Wide and Deep Learning for Recommendation Systems
+      Note for AutoRec: Autoencoders Meet Collaborative Filtering
     </h1>
   
 
@@ -100,46 +96,40 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><a target="_blank" rel="noopener" href="https://arxiv.org/pdf/1606.07792.pdf">Paper Link</a></p>
-<h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><ul>
-<li><p><strong>Problem Statement</strong>:</p>
+        <h2 id="Setup"><a href="#Setup" class="headerlink" title="Setup"></a>Setup</h2><ul>
+<li>The problem this paper solves: rating-based collabrative filtering:<ul>
+<li>m users and n iterms</li>
+<li>Each user can be represented by a partially observed vector</li>
+<li>Each item can be represented by a partially observed vector</li>
+<li>The aim of CF is to project the rating matrix to a low-dimension latent space</li>
+<li>We can consider User latent space or Item latent space, which leads to UserCF and Item CF</li>
+</ul>
+</li>
+</ul>
 <ul>
-<li>Large-scale regression and classification probelms with sparse inputs. </li>
-</ul>
-</li>
-<li><p>Wide &amp; Deep model for joinly training feed-forward neutral networks with embeddings and linear model with feature transformations for generic recommendation systems with sparse inuts.</p>
-</li>
-<li><p><strong>Memorization</strong>: memorize the results for some feature interactions through a wide set of cross-product features. It is effective and interpretable while requiring manually feature engineering. </p>
-</li>
-<li><p><strong>Generalization</strong>: With less feature engineering, deep neural networks can generalize better to unseen feature combinations through low-dimensional dense embeddings learned for the sparse features.</p>
-</li>
-</ul>
-<h2 id="Wide-amp-Deep"><a href="#Wide-amp-Deep" class="headerlink" title="Wide &amp; Deep"></a>Wide &amp; Deep</h2><ul>
-<li><p><strong>Setup</strong>: assume feature vector is X and label is Y.</p>
-</li>
-<li><p><strong>Wide Componen</strong>: the wide component is a linear model. The feature is  [X, phi(X)], where phi(X) is the cross-product transformation</p>
-</li>
-</ul>
-<p><img src="https://miro.medium.com/max/2400/1*XHvOuICw2E9inCJJxIyKUg.png" alt="image"></p>
+<li><p>User CF</p>
 <ul>
-<li><p><strong>Deep component</strong>: we input the feature vector X and map through embedding matrix and hidden layers.</p>
+<li>Motivation: <strong>similar people will have similar taste</strong></li>
+<li>Limitation: the user number m grows faster and the history of users is very sparse</li>
+</ul>
 </li>
-<li><p><strong>Joint Model</strong>: The joint model is<br><img src="https://miro.medium.com/max/700/1*c704nx973VSTAGhWnevIuA.png" alt="image"></p>
+<li><p>Item CF</p>
+<ul>
+<li>Motivation: <strong>Recommend similar item</strong></li>
+<li>For example, Netflix recommends similar movies.</li>
+<li>Use Item CF most cases</li>
+</ul>
 </li>
 </ul>
-<p><img src="https://miro.medium.com/max/690/1*pUzvrJijGioaxv8Xv71Wvw.png" alt="image"></p>
-<p><img src="https://1.bp.blogspot.com/-Dw1mB9am1l8/V3MgtOzp3uI/AAAAAAAABGs/mP-3nZQCjWwdk6qCa5WraSpK8A7rSPj3ACLcB/s1600/image04.png" alt="image"></p>
-<h2 id="References"><a href="#References" class="headerlink" title="References"></a>References</h2><ul>
-<li><a target="_blank" rel="noopener" href="https://deepctr-doc.readthedocs.io/en/latest/index.html">DeepCTR</a></li>
-</ul>
+<h2 id="Model"><a href="#Model" class="headerlink" title="Model"></a>Model</h2><p><img src="https://www.researchgate.net/profile/Lexing_Xie/publication/311491420/figure/fig1/AS:710737718689792@1546464485935/Item-based-AutoRec-model-We-use-plate-notation-to-indicate-that-there-are-n-copies-of.png" alt="image"></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://hjsang.github.io/2021/01/16/Note-for-Wide-and-Deep-Learning-for-Recommendation-Systems/" data-id="ckjztn5hs0000f6u2avt847ii" class="article-share-link">Share</a>
+      <a data-url="http://hjsang.github.io/2021/01/16/Note-for-AutoRec-Autoencoders-Meet-Collaborative-Filtering/" data-id="ckjzzfq6k00001pu241jn47di" class="article-share-link">Share</a>
       
       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/source/tags/CTR-prediction/" rel="tag">CTR prediction</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/source/tags/Recommendation-system/" rel="tag">Recommendation system</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/source/tags/Wide-Deep/" rel="tag">Wide & Deep</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/source/tags/CF/" rel="tag">CF</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/source/tags/Recommendation-system/" rel="tag">Recommendation system</a></li></ul>
 
     </footer>
   </div>
@@ -147,19 +137,10 @@
     
 <nav id="article-nav">
   
-    <a href="/2021/01/16/Note-for-AutoRec-Autoencoders-Meet-Collaborative-Filtering/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          Note for AutoRec: Autoencoders Meet Collaborative Filtering
-        
-      </div>
-    </a>
   
-  
-    <a href="/2021/01/04/Leetcode-1209-Remove-All-Adjacent-Duplicates-in-String-II/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2021/01/16/Note-for-Wide-and-Deep-Learning-for-Recommendation-Systems/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Leetcode 1209: Remove All Adjacent Duplicates in String II</div>
+      <div class="article-nav-title">Note for Wide and Deep Learning for Recommendation Systems</div>
     </a>
   
 </nav>
