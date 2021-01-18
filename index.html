@@ -71,6 +71,51 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-Leetcode-829-Consecutive-Numbers-Sum" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2021/01/18/Leetcode-829-Consecutive-Numbers-Sum/" class="article-date">
+  <time datetime="2021-01-18T15:44:46.000Z" itemprop="datePublished">2021-01-18</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/01/18/Leetcode-829-Consecutive-Numbers-Sum/">Leetcode 829: Consecutive Numbers Sum</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><strong>Hard</strong></p>
+<p>Given a positive integer N, how many ways can we write it as a sum of consecutive positive integers?</p>
+<p><strong>Example 1</strong>:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Input: 5</span><br><span class="line">Output: 2</span><br><span class="line">Explanation: 5 &#x3D; 5 &#x3D; 2 + 3</span><br></pre></td></tr></table></figure></p>
+<p><strong>Example 2</strong>:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Input: 9</span><br><span class="line">Output: 3</span><br><span class="line">Explanation: 9 &#x3D; 9 &#x3D; 4 + 5 &#x3D; 2 + 3 + 4</span><br></pre></td></tr></table></figure></p>
+<p><strong>Example 3</strong>:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Input: 15</span><br><span class="line">Output: 4</span><br><span class="line">Explanation: 15 &#x3D; 15 &#x3D; 8 + 7 &#x3D; 4 + 5 + 6 &#x3D; 1 + 2 + 3 + 4 + 5</span><br></pre></td></tr></table></figure></p>
+<p><strong>Note</strong>:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1 &lt;&#x3D; N &lt;&#x3D; 10 ^ 9</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">consecutiveNumbersSum</span>(<span class="params">self, N: <span class="built_in">int</span></span>) -&gt; int:</span></span><br><span class="line">        <span class="comment"># N = (x+1) + ... + (x+k) &lt;==&gt; 2N = k(2x+k+1) &lt;==&gt; x = N/k - (k+1)/2</span></span><br><span class="line">        <span class="comment"># x&gt;=0 &lt;==&gt; k &lt;=sqrt&#123;2N+0.25&#125;-0.5</span></span><br><span class="line">        count = <span class="number">0</span></span><br><span class="line">        upper_limit = ceil((<span class="number">2</span>*N+<span class="number">0.25</span>)**<span class="number">0.5</span> -<span class="number">0.5</span>) + <span class="number">1</span></span><br><span class="line">        <span class="keyword">for</span> k <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>,upper_limit):</span><br><span class="line">            <span class="keyword">if</span> (N - k*(k+<span class="number">1</span>)//<span class="number">2</span>) % k == <span class="number">0</span>:</span><br><span class="line">                count +=<span class="number">1</span></span><br><span class="line">        <span class="keyword">return</span> count</span><br><span class="line"></span><br><span class="line"><span class="comment"># Time Complexity: O(sqrt(N))</span></span><br><span class="line"><span class="comment"># Space Complexity: O(1)</span></span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://hjsang.github.io/2021/01/18/Leetcode-829-Consecutive-Numbers-Sum/" data-id="ckk2qrtiv0000htu283jr8cu4" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/source/tags/Hard/" rel="tag">Hard</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/source/tags/Leetcode/" rel="tag">Leetcode</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/source/tags/Math/" rel="tag">Math</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-Note-for-Deep-Crossing" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2021/01/16/Note-for-Deep-Crossing/" class="article-date">
@@ -395,59 +440,6 @@
 
 
   
-    <article id="post-Leetcode-227-Basic-Calculator-II" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2021/01/04/Leetcode-227-Basic-Calculator-II/" class="article-date">
-  <time datetime="2021-01-04T19:56:59.000Z" itemprop="datePublished">2021-01-04</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/01/04/Leetcode-227-Basic-Calculator-II/">Leetcode 227: Basic Calculator II</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Medium</p>
-<p>Given a string s which represents an expression, evaluate this expression and return its value.</p>
-<p>The integer division should truncate toward zero.</p>
-<p><strong>Example 1</strong>:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: s &#x3D; &quot;3+2*2&quot;</span><br><span class="line">Output: 7</span><br></pre></td></tr></table></figure></p>
-<p><strong>Example 2</strong>:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: s &#x3D; &quot; 3&#x2F;2 &quot;</span><br><span class="line">Output: 1</span><br></pre></td></tr></table></figure></p>
-<p><strong>Example 3</strong>:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: s &#x3D; &quot; 3+5 &#x2F; 2 &quot;</span><br><span class="line">Output: 5</span><br></pre></td></tr></table></figure></p>
-<p><strong>Constraints</strong>:</p>
-<ul>
-<li>1 &lt;= s.length &lt;= 3 * 105</li>
-<li>s consists of integers and operators (‘+’, ‘-‘, ‘*‘, ‘/‘) separated by some number of spaces.</li>
-<li>s represents a valid expression.</li>
-<li>All the integers in the expression are non-negative integers in the range [0, 231 - 1].</li>
-<li>The answer is guaranteed to fit in a 32-bit integer.</li>
-</ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">calculate</span>(<span class="params">self, s: <span class="built_in">str</span></span>) -&gt; int:</span></span><br><span class="line">        <span class="comment"># Stack</span></span><br><span class="line">        <span class="comment"># c in &#123;digit, +, -, *, /&#125;</span></span><br><span class="line">        <span class="comment"># *, / have higher priority than +, -</span></span><br><span class="line">        <span class="comment"># if the operator is * or /, perform imediately</span></span><br><span class="line">        stack = []</span><br><span class="line">        sign = <span class="string">&#x27;+&#x27;</span></span><br><span class="line">        num = <span class="number">0</span></span><br><span class="line">        n = <span class="built_in">len</span>(s)</span><br><span class="line">        <span class="keyword">for</span> i,c <span class="keyword">in</span> <span class="built_in">enumerate</span>(s):</span><br><span class="line">            <span class="keyword">if</span> c.isdigit():</span><br><span class="line">                num = <span class="number">10</span>*num + <span class="built_in">int</span>(c)</span><br><span class="line">            <span class="keyword">if</span> c <span class="keyword">in</span> [<span class="string">&#x27;-&#x27;</span>, <span class="string">&#x27;+&#x27;</span>, <span class="string">&#x27;/&#x27;</span>, <span class="string">&#x27;*&#x27;</span>] <span class="keyword">or</span> i==n-<span class="number">1</span>:</span><br><span class="line">                <span class="keyword">if</span> sign == <span class="string">&#x27;+&#x27;</span>:</span><br><span class="line">                    stack.append(num)</span><br><span class="line">                <span class="keyword">if</span> sign == <span class="string">&#x27;-&#x27;</span>:</span><br><span class="line">                    stack.append(-num)</span><br><span class="line">                <span class="keyword">if</span> sign == <span class="string">&#x27;*&#x27;</span>:</span><br><span class="line">                    prev = stack.pop()</span><br><span class="line">                    stack.append(prev*num)</span><br><span class="line">                <span class="keyword">if</span> sign == <span class="string">&#x27;/&#x27;</span>:</span><br><span class="line">                    prev = stack.pop()</span><br><span class="line">                    <span class="keyword">if</span> prev&gt;<span class="number">0</span>:</span><br><span class="line">                        stack.append(prev//num)</span><br><span class="line">                    <span class="keyword">else</span>:</span><br><span class="line">                        stack.append(-(-prev//num))</span><br><span class="line">                sign = c</span><br><span class="line">                num = <span class="number">0</span></span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">sum</span>(stack)</span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://hjsang.github.io/2021/01/04/Leetcode-227-Basic-Calculator-II/" data-id="ckjj1hu840003epu2fd9v15y9" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/source/tags/Leetcode/" rel="tag">Leetcode</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/source/tags/Stack/" rel="tag">Stack</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
 
 
   <nav id="page-nav">
@@ -466,7 +458,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">标签</h3>
     <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/source/tags/Algorithm/" rel="tag">Algorithm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/source/tags/BFS/" rel="tag">BFS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/source/tags/Binary-Search/" rel="tag">Binary Search</a></li><li class="tag-list-item"><a class="tag-list-link" href="/source/tags/Binary-Tree/" rel="tag">Binary Tree</a></li><li class="tag-list-item"><a class="tag-list-link" href="/source/tags/CF/" rel="tag">CF</a></li><li class="tag-list-item"><a class="tag-list-link" href="/source/tags/CTR-prediction/" rel="tag">CTR prediction</a></li><li class="tag-list-item"><a class="tag-list-link" href="/source/tags/DFS/" rel="tag">DFS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/source/tags/Deep-Crossing/" rel="tag">Deep Crossing</a></li><li class="tag-list-item"><a class="tag-list-link" href="/source/tags/Implicit-relevance-feedback/" rel="tag">Implicit relevance feedback</a></li><li class="tag-list-item"><a class="tag-list-link" href="/source/tags/LeetCode/" rel="tag">LeetCode</a></li><li class="tag-list-item"><a class="tag-list-link" href="/source/tags/Leetcode/" rel="tag">Leetcode</a></li><li class="tag-list-item"><a class="tag-list-link" href="/source/tags/Paper-reading-notes/" rel="tag">Paper reading notes</a></li><li class="tag-list-item"><a class="tag-list-link" href="/source/tags/Recommendation-system/" rel="tag">Recommendation system</a></li><li class="tag-list-item"><a class="tag-list-link" href="/source/tags/Stack/" rel="tag">Stack</a></li><li class="tag-list-item"><a class="tag-list-link" href="/source/tags/Traversal/" rel="tag">Traversal</a></li><li class="tag-list-item"><a class="tag-list-link" href="/source/tags/Tree/" rel="tag">Tree</a></li><li class="tag-list-item"><a class="tag-list-link" href="/source/tags/Tree-Traversal/" rel="tag">Tree Traversal</a></li><li class="tag-list-item"><a class="tag-list-link" href="/source/tags/Two-pointers/" rel="tag">Two pointers</a></li><li class="tag-list-item"><a class="tag-list-link" href="/source/tags/Web-Search/" rel="tag">Web Search</a></li><li class="tag-list-item"><a class="tag-list-link" href="/source/tags/Web-search-ranking/" rel="tag">Web search ranking</a></li><li class="tag-list-item"><a class="tag-list-link" href="/source/tags/Wide-Deep/" rel="tag">Wide & Deep</a></li><li class="tag-list-item"><a class="tag-list-link" href="/source/tags/bfs/" rel="tag">bfs</a></li><li class="tag-list-item"><a class="tag-list-link" href="/source/tags/data-science/" rel="tag">data science</a></li><li class="tag-list-item"><a class="tag-list-link" href="/source/tags/deep-learning/" rel="tag">deep learning</a></li><li class="tag-list-item"><a class="tag-list-link" href="/source/tags/dfs/" rel="tag">dfs</a></li><li class="tag-list-item"><a class="tag-list-link" href="/source/tags/pandas/" rel="tag">pandas</a></li><li class="tag-list-item"><a class="tag-list-link" href="/source/tags/paper/" rel="tag">paper</a></li><li class="tag-list-item"><a class="tag-list-link" href="/source/tags/recommender-system/" rel="tag">recommender system</a></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/source/tags/Algorithm/" rel="tag">Algorithm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/source/tags/BFS/" rel="tag">BFS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/source/tags/Binary-Search/" rel="tag">Binary Search</a></li><li class="tag-list-item"><a class="tag-list-link" href="/source/tags/Binary-Tree/" rel="tag">Binary Tree</a></li><li class="tag-list-item"><a class="tag-list-link" href="/source/tags/CF/" rel="tag">CF</a></li><li class="tag-list-item"><a class="tag-list-link" href="/source/tags/CTR-prediction/" rel="tag">CTR prediction</a></li><li class="tag-list-item"><a class="tag-list-link" href="/source/tags/DFS/" rel="tag">DFS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/source/tags/Deep-Crossing/" rel="tag">Deep Crossing</a></li><li class="tag-list-item"><a class="tag-list-link" href="/source/tags/Hard/" rel="tag">Hard</a></li><li class="tag-list-item"><a class="tag-list-link" href="/source/tags/Implicit-relevance-feedback/" rel="tag">Implicit relevance feedback</a></li><li class="tag-list-item"><a class="tag-list-link" href="/source/tags/LeetCode/" rel="tag">LeetCode</a></li><li class="tag-list-item"><a class="tag-list-link" href="/source/tags/Leetcode/" rel="tag">Leetcode</a></li><li class="tag-list-item"><a class="tag-list-link" href="/source/tags/Math/" rel="tag">Math</a></li><li class="tag-list-item"><a class="tag-list-link" href="/source/tags/Paper-reading-notes/" rel="tag">Paper reading notes</a></li><li class="tag-list-item"><a class="tag-list-link" href="/source/tags/Recommendation-system/" rel="tag">Recommendation system</a></li><li class="tag-list-item"><a class="tag-list-link" href="/source/tags/Stack/" rel="tag">Stack</a></li><li class="tag-list-item"><a class="tag-list-link" href="/source/tags/Traversal/" rel="tag">Traversal</a></li><li class="tag-list-item"><a class="tag-list-link" href="/source/tags/Tree/" rel="tag">Tree</a></li><li class="tag-list-item"><a class="tag-list-link" href="/source/tags/Tree-Traversal/" rel="tag">Tree Traversal</a></li><li class="tag-list-item"><a class="tag-list-link" href="/source/tags/Two-pointers/" rel="tag">Two pointers</a></li><li class="tag-list-item"><a class="tag-list-link" href="/source/tags/Web-Search/" rel="tag">Web Search</a></li><li class="tag-list-item"><a class="tag-list-link" href="/source/tags/Web-search-ranking/" rel="tag">Web search ranking</a></li><li class="tag-list-item"><a class="tag-list-link" href="/source/tags/Wide-Deep/" rel="tag">Wide & Deep</a></li><li class="tag-list-item"><a class="tag-list-link" href="/source/tags/bfs/" rel="tag">bfs</a></li><li class="tag-list-item"><a class="tag-list-link" href="/source/tags/data-science/" rel="tag">data science</a></li><li class="tag-list-item"><a class="tag-list-link" href="/source/tags/deep-learning/" rel="tag">deep learning</a></li><li class="tag-list-item"><a class="tag-list-link" href="/source/tags/dfs/" rel="tag">dfs</a></li><li class="tag-list-item"><a class="tag-list-link" href="/source/tags/pandas/" rel="tag">pandas</a></li><li class="tag-list-item"><a class="tag-list-link" href="/source/tags/paper/" rel="tag">paper</a></li><li class="tag-list-item"><a class="tag-list-link" href="/source/tags/recommender-system/" rel="tag">recommender system</a></li></ul>
     </div>
   </div>
 
@@ -476,7 +468,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">标签云</h3>
     <div class="widget tagcloud">
-      <a href="/source/tags/Algorithm/" style="font-size: 10px;">Algorithm</a> <a href="/source/tags/BFS/" style="font-size: 10px;">BFS</a> <a href="/source/tags/Binary-Search/" style="font-size: 10px;">Binary Search</a> <a href="/source/tags/Binary-Tree/" style="font-size: 10px;">Binary Tree</a> <a href="/source/tags/CF/" style="font-size: 10px;">CF</a> <a href="/source/tags/CTR-prediction/" style="font-size: 12px;">CTR prediction</a> <a href="/source/tags/DFS/" style="font-size: 10px;">DFS</a> <a href="/source/tags/Deep-Crossing/" style="font-size: 10px;">Deep Crossing</a> <a href="/source/tags/Implicit-relevance-feedback/" style="font-size: 10px;">Implicit relevance feedback</a> <a href="/source/tags/LeetCode/" style="font-size: 12px;">LeetCode</a> <a href="/source/tags/Leetcode/" style="font-size: 20px;">Leetcode</a> <a href="/source/tags/Paper-reading-notes/" style="font-size: 10px;">Paper reading notes</a> <a href="/source/tags/Recommendation-system/" style="font-size: 14px;">Recommendation system</a> <a href="/source/tags/Stack/" style="font-size: 18px;">Stack</a> <a href="/source/tags/Traversal/" style="font-size: 10px;">Traversal</a> <a href="/source/tags/Tree/" style="font-size: 16px;">Tree</a> <a href="/source/tags/Tree-Traversal/" style="font-size: 10px;">Tree Traversal</a> <a href="/source/tags/Two-pointers/" style="font-size: 10px;">Two pointers</a> <a href="/source/tags/Web-Search/" style="font-size: 10px;">Web Search</a> <a href="/source/tags/Web-search-ranking/" style="font-size: 10px;">Web search ranking</a> <a href="/source/tags/Wide-Deep/" style="font-size: 10px;">Wide & Deep</a> <a href="/source/tags/bfs/" style="font-size: 10px;">bfs</a> <a href="/source/tags/data-science/" style="font-size: 10px;">data science</a> <a href="/source/tags/deep-learning/" style="font-size: 10px;">deep learning</a> <a href="/source/tags/dfs/" style="font-size: 10px;">dfs</a> <a href="/source/tags/pandas/" style="font-size: 10px;">pandas</a> <a href="/source/tags/paper/" style="font-size: 10px;">paper</a> <a href="/source/tags/recommender-system/" style="font-size: 10px;">recommender system</a>
+      <a href="/source/tags/Algorithm/" style="font-size: 10px;">Algorithm</a> <a href="/source/tags/BFS/" style="font-size: 10px;">BFS</a> <a href="/source/tags/Binary-Search/" style="font-size: 10px;">Binary Search</a> <a href="/source/tags/Binary-Tree/" style="font-size: 10px;">Binary Tree</a> <a href="/source/tags/CF/" style="font-size: 10px;">CF</a> <a href="/source/tags/CTR-prediction/" style="font-size: 12px;">CTR prediction</a> <a href="/source/tags/DFS/" style="font-size: 10px;">DFS</a> <a href="/source/tags/Deep-Crossing/" style="font-size: 10px;">Deep Crossing</a> <a href="/source/tags/Hard/" style="font-size: 10px;">Hard</a> <a href="/source/tags/Implicit-relevance-feedback/" style="font-size: 10px;">Implicit relevance feedback</a> <a href="/source/tags/LeetCode/" style="font-size: 12px;">LeetCode</a> <a href="/source/tags/Leetcode/" style="font-size: 20px;">Leetcode</a> <a href="/source/tags/Math/" style="font-size: 10px;">Math</a> <a href="/source/tags/Paper-reading-notes/" style="font-size: 10px;">Paper reading notes</a> <a href="/source/tags/Recommendation-system/" style="font-size: 14px;">Recommendation system</a> <a href="/source/tags/Stack/" style="font-size: 18px;">Stack</a> <a href="/source/tags/Traversal/" style="font-size: 10px;">Traversal</a> <a href="/source/tags/Tree/" style="font-size: 16px;">Tree</a> <a href="/source/tags/Tree-Traversal/" style="font-size: 10px;">Tree Traversal</a> <a href="/source/tags/Two-pointers/" style="font-size: 10px;">Two pointers</a> <a href="/source/tags/Web-Search/" style="font-size: 10px;">Web Search</a> <a href="/source/tags/Web-search-ranking/" style="font-size: 10px;">Web search ranking</a> <a href="/source/tags/Wide-Deep/" style="font-size: 10px;">Wide & Deep</a> <a href="/source/tags/bfs/" style="font-size: 10px;">bfs</a> <a href="/source/tags/data-science/" style="font-size: 10px;">data science</a> <a href="/source/tags/deep-learning/" style="font-size: 10px;">deep learning</a> <a href="/source/tags/dfs/" style="font-size: 10px;">dfs</a> <a href="/source/tags/pandas/" style="font-size: 10px;">pandas</a> <a href="/source/tags/paper/" style="font-size: 10px;">paper</a> <a href="/source/tags/recommender-system/" style="font-size: 10px;">recommender system</a>
     </div>
   </div>
 
@@ -498,6 +490,10 @@
       <ul>
         
           <li>
+            <a href="/2021/01/18/Leetcode-829-Consecutive-Numbers-Sum/">Leetcode 829: Consecutive Numbers Sum</a>
+          </li>
+        
+          <li>
             <a href="/2021/01/16/Note-for-Deep-Crossing/">Note for Deep Crossing</a>
           </li>
         
@@ -511,10 +507,6 @@
         
           <li>
             <a href="/2021/01/04/Leetcode-1209-Remove-All-Adjacent-Duplicates-in-String-II/">Leetcode 1209: Remove All Adjacent Duplicates in String II</a>
-          </li>
-        
-          <li>
-            <a href="/2021/01/04/Leetcode-224-Basic-Calculator/">Leetcode 224: Basic Calculator</a>
           </li>
         
       </ul>

@@ -6,7 +6,7 @@
   <link href="http://hjsang.github.io/atom.xml" rel="self"/>
   
   <link href="http://hjsang.github.io/"/>
-  <updated>2021-01-16T19:05:02.096Z</updated>
+  <updated>2021-01-18T15:46:59.482Z</updated>
   <id>http://hjsang.github.io/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Leetcode 829: Consecutive Numbers Sum</title>
+    <link href="http://hjsang.github.io/2021/01/18/Leetcode-829-Consecutive-Numbers-Sum/"/>
+    <id>http://hjsang.github.io/2021/01/18/Leetcode-829-Consecutive-Numbers-Sum/</id>
+    <published>2021-01-18T15:44:46.000Z</published>
+    <updated>2021-01-18T15:46:59.482Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;strong&gt;Hard&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Given a</summary>
+        
+      
+    
+    
+    
+    
+    <category term="Leetcode" scheme="http://hjsang.github.io/source/tags/Leetcode/"/>
+    
+    <category term="Hard" scheme="http://hjsang.github.io/source/tags/Hard/"/>
+    
+    <category term="Math" scheme="http://hjsang.github.io/source/tags/Math/"/>
+    
+  </entry>
   
   <entry>
     <title>Note for Deep Crossing</title>
