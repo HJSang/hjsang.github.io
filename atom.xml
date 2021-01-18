@@ -6,7 +6,7 @@
   <link href="http://hjsang.github.io/atom.xml" rel="self"/>
   
   <link href="http://hjsang.github.io/"/>
-  <updated>2021-01-18T15:46:59.482Z</updated>
+  <updated>2021-01-18T16:17:34.087Z</updated>
   <id>http://hjsang.github.io/</id>
   
   <author>
@@ -17,11 +17,41 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Leetcode 2: Add Two Numbers</title>
+    <link href="http://hjsang.github.io/2021/01/18/Leetcode-2-Add-Two-Numbers/"/>
+    <id>http://hjsang.github.io/2021/01/18/Leetcode-2-Add-Two-Numbers/</id>
+    <published>2021-01-18T16:05:33.000Z</published>
+    <updated>2021-01-18T16:17:34.087Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;strong&gt;Medium&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;You</summary>
+        
+      
+    
+    
+    
+    
+    <category term="Leetcode" scheme="http://hjsang.github.io/source/tags/Leetcode/"/>
+    
+    <category term="Math" scheme="http://hjsang.github.io/source/tags/Math/"/>
+    
+    <category term="Linked list" scheme="http://hjsang.github.io/source/tags/Linked-list/"/>
+    
+    <category term="Medium" scheme="http://hjsang.github.io/source/tags/Medium/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Leetcode 829: Consecutive Numbers Sum</title>
     <link href="http://hjsang.github.io/2021/01/18/Leetcode-829-Consecutive-Numbers-Sum/"/>
     <id>http://hjsang.github.io/2021/01/18/Leetcode-829-Consecutive-Numbers-Sum/</id>
     <published>2021-01-18T15:44:46.000Z</published>
-    <updated>2021-01-18T15:46:59.482Z</updated>
+    <updated>2021-01-18T15:56:07.658Z</updated>
     
     
       
@@ -532,27 +562,6 @@
     <category term="LeetCode" scheme="http://hjsang.github.io/source/tags/LeetCode/"/>
     
     <category term="Binary Search" scheme="http://hjsang.github.io/source/tags/Binary-Search/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hello World</title>
-    <link href="http://hjsang.github.io/2020/11/24/hello-world/"/>
-    <id>http://hjsang.github.io/2020/11/24/hello-world/</id>
-    <published>2020-11-24T17:07:30.217Z</published>
-    <updated>2020-11-24T17:07:30.217Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;Welcome to &lt;a</summary>
-        
-      
-    
-    
-    
     
   </entry>
   

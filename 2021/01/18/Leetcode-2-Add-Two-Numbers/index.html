@@ -5,26 +5,25 @@
   
 
   
-  <title>Note for Deep Crossing | 学习笔记</title>
+  <title>Leetcode 2: Add Two Numbers | 学习笔记</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="References Deep Crossing: Web-Scale Modeling without Manually Crafted Combinatorial Features  Introduction Before Deep Crossing: manually design combinatorial features or use xgb to design features. H">
+  <meta name="description" content="Medium You are given two non-empty linked lists representing two non-negative integers. The digits are stored in reverse order, and each of their nodes contains a single digit. Add the two numbers and">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Note for Deep Crossing">
-<meta property="og:url" content="http://hjsang.github.io/2021/01/16/Note-for-Deep-Crossing/index.html">
+<meta property="og:title" content="Leetcode 2: Add Two Numbers">
+<meta property="og:url" content="http://hjsang.github.io/2021/01/18/Leetcode-2-Add-Two-Numbers/index.html">
 <meta property="og:site_name" content="学习笔记">
-<meta property="og:description" content="References Deep Crossing: Web-Scale Modeling without Manually Crafted Combinatorial Features  Introduction Before Deep Crossing: manually design combinatorial features or use xgb to design features. H">
+<meta property="og:description" content="Medium You are given two non-empty linked lists representing two non-negative integers. The digits are stored in reverse order, and each of their nodes contains a single digit. Add the two numbers and">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://dos-tacos.github.io/images/syleeie/2019-07-21/deepcrossing.png">
-<meta property="og:image" content="https://raw.githubusercontent.com/HJSang/hjsang.github.io/main/medias/image/deep_cross1.png">
-<meta property="og:image" content="https://raw.githubusercontent.com/HJSang/hjsang.github.io/main/medias/image/deep_cross2.png">
-<meta property="article:published_time" content="2021-01-16T18:22:57.000Z">
-<meta property="article:modified_time" content="2021-01-16T19:05:02.096Z">
+<meta property="og:image" content="https://assets.leetcode.com/uploads/2020/10/02/addtwonumber1.jpg">
+<meta property="article:published_time" content="2021-01-18T16:05:33.000Z">
+<meta property="article:modified_time" content="2021-01-18T16:17:34.087Z">
 <meta property="article:author" content="Hejian Sang">
-<meta property="article:tag" content="Recommendation system">
-<meta property="article:tag" content="CTR prediction">
-<meta property="article:tag" content="Deep Crossing">
+<meta property="article:tag" content="Leetcode">
+<meta property="article:tag" content="Math">
+<meta property="article:tag" content="Linked list">
+<meta property="article:tag" content="Medium">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://dos-tacos.github.io/images/syleeie/2019-07-21/deepcrossing.png">
+<meta name="twitter:image" content="https://assets.leetcode.com/uploads/2020/10/02/addtwonumber1.jpg">
   
     <link rel="alternate" href="/atom.xml" title="学习笔记" type="application/atom+xml">
   
@@ -77,10 +76,10 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-Note-for-Deep-Crossing" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-Leetcode-2-Add-Two-Numbers" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2021/01/16/Note-for-Deep-Crossing/" class="article-date">
-  <time datetime="2021-01-16T18:22:57.000Z" itemprop="datePublished">2021-01-16</time>
+    <a href="/2021/01/18/Leetcode-2-Add-Two-Numbers/" class="article-date">
+  <time datetime="2021-01-18T16:05:33.000Z" itemprop="datePublished">2021-01-18</time>
 </a>
     
   </div>
@@ -91,7 +90,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Note for Deep Crossing
+      Leetcode 2: Add Two Numbers
     </h1>
   
 
@@ -99,55 +98,27 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="References"><a href="#References" class="headerlink" title="References"></a>References</h2><ul>
-<li><a target="_blank" rel="noopener" href="https://www.kdd.org/kdd2016/papers/files/adf0975-shanA.pdf">Deep Crossing: Web-Scale Modeling without Manually Crafted Combinatorial Features</a></li>
+        <p><strong>Medium</strong></p>
+<p>You are given two non-empty linked lists representing two non-negative integers. The digits are stored in reverse order, and each of their nodes contains a single digit. Add the two numbers and return the sum as a linked list.</p>
+<p>You may assume the two numbers do not contain any leading zero, except the number 0 itself.</p>
+<p><strong>Example 1</strong>:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Input: l1 &#x3D; [2,4,3], l2 &#x3D; [5,6,4]</span><br><span class="line">Output: [7,0,8]</span><br><span class="line">Explanation: 342 + 465 &#x3D; 807.</span><br></pre></td></tr></table></figure><br><img src="https://assets.leetcode.com/uploads/2020/10/02/addtwonumber1.jpg" alt="image"></p>
+<p><strong>Example 2</strong>:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: l1 &#x3D; [0], l2 &#x3D; [0]</span><br><span class="line">Output: [0]</span><br></pre></td></tr></table></figure></p>
+<p><strong>Example 3</strong>:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: l1 &#x3D; [9,9,9,9,9,9,9], l2 &#x3D; [9,9,9,9]</span><br><span class="line">Output: [8,9,9,9,0,0,0,1]</span><br></pre></td></tr></table></figure></p>
+<p><strong>Constraints</strong>:</p>
+<ul>
+<li>The number of nodes in each linked list is in the range [1, 100]</li>
+<li>0 &lt;= Node.val &lt;= 9</li>
+<li>It is guaranteed that the list represents a number that does not have leading zeros.</li>
 </ul>
-<h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><ul>
-<li>Before Deep Crossing: manually design combinatorial features or use xgb to design features. Highy depend on experience and domain knlowedge.</li>
-<li>In this paper, the authors proposes the Deep Crossing model:<ul>
-<li>A deep neural network that automatically combines features to produce superior models</li>
-<li>The input is a set of individual features that can be either dense or sparse</li>
-<li>The important corssing features are discovered implicitly by the networks</li>
-</ul>
-</li>
-</ul>
-<h2 id="Sponsored-Search"><a href="#Sponsored-Search" class="headerlink" title="Sponsored Search"></a>Sponsored Search</h2><ul>
-<li>Deep Crossing is discussed in the context of <strong>sponsered search</strong>: showing ads alongside organic search results</li>
-<li>There are three major agents: the user, the advertiser and the search platform</li>
-<li>The below are the concepts ke y to the discussion:<ul>
-<li>Query: A text string a user types into the search box</li>
-<li>Keyword: A text string related to a product, specified by an advertiser to match a user query</li>
-<li>Title: The title of a sponsered advertisement</li>
-<li>Landing page: A product’s web site a user reahes when the corresponding ad is clicked by a user</li>
-<li>Match Type: An option given to the advertiser on how closely the keyword should be matched by a user query, usually one of four kinds:  exact, phrase, broad and contextual</li>
-<li>Campaign: A set of ads that share the same setting such as budget and location targeting, often used to organize products into categories</li>
-<li>Impression: An instance of an ad being displayed to a user. An impression is usually logged with other information available at the run-time</li>
-<li>Click: An indication of whether an impression was clicked by a user.</li>
-<li>Click through rate: Total number of clicks over total number of impressions</li>
-<li>click Prediction: A critical model of the platform that predicts the likelihood a user clicks on a given ad for a given query</li>
-</ul>
-</li>
-</ul>
-<h2 id="Feature-representation"><a href="#Feature-representation" class="headerlink" title="Feature representation"></a>Feature representation</h2><h3 id="Individual-features"><a href="#Individual-features" class="headerlink" title="Individual features"></a>Individual features</h3><ul>
-<li>Forr text features such as a query, one option is to convert the string into a tri-letter gram with 49, 292 dimensions</li>
-<li>Categorical input is represented by a one-hot vector</li>
-<li>There are usually millions of campaigns in a sponsered search system. one hot vector would significnatly increase the size of the model. One solution is to use a pair of compaign features as exemplified in the table (For example, only the top 10K cmpaigns with the highest numberof clicks)</li>
-</ul>
-<h2 id="Model-architecture"><a href="#Model-architecture" class="headerlink" title="Model architecture"></a>Model architecture</h2><p><img src="https://dos-tacos.github.io/images/syleeie/2019-07-21/deepcrossing.png" alt="image"></p>
-<h3 id="Embedding-and-Stacking-layers"><a href="#Embedding-and-Stacking-layers" class="headerlink" title="Embedding and Stacking layers"></a>Embedding and Stacking layers</h3><ul>
-<li>Embedding is applied per individual feature to transform the input features</li>
-<li>The stacking layer is to concate them into one vector </li>
-</ul>
-<p><img src="https://raw.githubusercontent.com/HJSang/hjsang.github.io/main/medias/image/deep_cross1.png" alt="image"></p>
-<h3 id="Residual-layer"><a href="#Residual-layer" class="headerlink" title="Residual layer"></a>Residual layer</h3><p><img src="https://raw.githubusercontent.com/HJSang/hjsang.github.io/main/medias/image/deep_cross2.png" alt="image"></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Definition for singly-linked list.</span></span><br><span class="line"><span class="comment"># class ListNode:</span></span><br><span class="line"><span class="comment">#     def __init__(self, val=0, next=None):</span></span><br><span class="line"><span class="comment">#         self.val = val</span></span><br><span class="line"><span class="comment">#         self.next = next</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">addTwoNumbers</span>(<span class="params">self, l1: ListNode, l2: ListNode</span>) -&gt; ListNode:</span></span><br><span class="line">        head = ListNode(<span class="number">0</span>)</span><br><span class="line">        node = head</span><br><span class="line">        add = <span class="number">0</span></span><br><span class="line">        <span class="keyword">while</span> l1 <span class="keyword">or</span> l2:</span><br><span class="line">            <span class="keyword">if</span> l1:</span><br><span class="line">                add += l1.val</span><br><span class="line">                l1 = l1.<span class="built_in">next</span></span><br><span class="line">            <span class="keyword">if</span> l2:</span><br><span class="line">                add += l2.val</span><br><span class="line">                l2 = l2.<span class="built_in">next</span></span><br><span class="line">            node.<span class="built_in">next</span> = ListNode(add%<span class="number">10</span>)</span><br><span class="line">            node = node.<span class="built_in">next</span></span><br><span class="line">            add = add//<span class="number">10</span></span><br><span class="line">        <span class="keyword">if</span> add:</span><br><span class="line">            node.<span class="built_in">next</span> = ListNode(add)</span><br><span class="line">            node = node.<span class="built_in">next</span></span><br><span class="line">        <span class="keyword">return</span> head.<span class="built_in">next</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://hjsang.github.io/2021/01/16/Note-for-Deep-Crossing/" data-id="ckk02ywt70000eru27xnc836z" class="article-share-link">Share</a>
+      <a data-url="http://hjsang.github.io/2021/01/18/Leetcode-2-Add-Two-Numbers/" data-id="ckk2rv4k50000nlu2gi0k2wtn" class="article-share-link">Share</a>
       
       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/source/tags/CTR-prediction/" rel="tag">CTR prediction</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/source/tags/Deep-Crossing/" rel="tag">Deep Crossing</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/source/tags/Recommendation-system/" rel="tag">Recommendation system</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/source/tags/Leetcode/" rel="tag">Leetcode</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/source/tags/Linked-list/" rel="tag">Linked list</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/source/tags/Math/" rel="tag">Math</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/source/tags/Medium/" rel="tag">Medium</a></li></ul>
 
     </footer>
   </div>
@@ -155,19 +126,10 @@
     
 <nav id="article-nav">
   
-    <a href="/2021/01/18/Leetcode-829-Consecutive-Numbers-Sum/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          Leetcode 829: Consecutive Numbers Sum
-        
-      </div>
-    </a>
   
-  
-    <a href="/2021/01/16/Note-for-AutoRec-Autoencoders-Meet-Collaborative-Filtering/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2021/01/18/Leetcode-829-Consecutive-Numbers-Sum/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Note for AutoRec: Autoencoders Meet Collaborative Filtering</div>
+      <div class="article-nav-title">Leetcode 829: Consecutive Numbers Sum</div>
     </a>
   
 </nav>
