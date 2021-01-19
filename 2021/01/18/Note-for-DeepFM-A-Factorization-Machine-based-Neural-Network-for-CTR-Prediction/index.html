@@ -5,18 +5,25 @@
   
 
   
-  <title>Tag: Leetcode | 学习笔记</title>
+  <title>Note for DeepFM: A Factorization-Machine based Neural Network for CTR Prediction | 学习笔记</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="新东西这么多 一个一个开始学">
-<meta property="og:type" content="website">
-<meta property="og:title" content="学习笔记">
-<meta property="og:url" content="http://hjsang.github.io/source/tags/Leetcode/page/2/index.html">
+  <meta name="description" content="Introduction Compared with Wide &amp; Deep model, DeepFM has a shared input to its ‘wide’ and ‘deep’ parts, with no need of feature engineering besides raw features. According to the wide and deep mo">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Note for DeepFM: A Factorization-Machine based Neural Network for CTR Prediction">
+<meta property="og:url" content="http://hjsang.github.io/2021/01/18/Note-for-DeepFM-A-Factorization-Machine-based-Neural-Network-for-CTR-Prediction/index.html">
 <meta property="og:site_name" content="学习笔记">
-<meta property="og:description" content="新东西这么多 一个一个开始学">
+<meta property="og:description" content="Introduction Compared with Wide &amp; Deep model, DeepFM has a shared input to its ‘wide’ and ‘deep’ parts, with no need of feature engineering besides raw features. According to the wide and deep mo">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://www.researchgate.net/profile/Huifeng_Guo/publication/318829508/figure/fig1/AS:522607722467328@1501610798143/Wide-deep-architecture-of-DeepFM-The-wide-and-deep-component-share-the-same-input-raw.png">
+<meta property="article:published_time" content="2021-01-19T02:38:05.000Z">
+<meta property="article:modified_time" content="2021-01-19T02:55:53.137Z">
 <meta property="article:author" content="Hejian Sang">
-<meta property="article:tag" content="课程笔记，总结记录，阅读笔记">
+<meta property="article:tag" content="paper">
+<meta property="article:tag" content="CTR prediction">
+<meta property="article:tag" content="DeepFM">
+<meta property="article:tag" content="Recommendation systems">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://www.researchgate.net/profile/Huifeng_Guo/publication/318829508/figure/fig1/AS:522607722467328@1501610798143/Wide-deep-architecture-of-DeepFM-The-wide-and-deep-component-share-the-same-input-raw.png">
   
     <link rel="alternate" href="/atom.xml" title="学习笔记" type="application/atom+xml">
   
@@ -69,64 +76,61 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2020/12/24/Leetcode-297-Serialize-and-Deserialize-Binary-Tree/" class="archive-article-date">
-  <time datetime="2020-12-24T21:26:28.000Z" itemprop="datePublished">12月 24</time>
+        <section id="main"><article id="post-Note-for-DeepFM-A-Factorization-Machine-based-Neural-Network-for-CTR-Prediction" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2021/01/18/Note-for-DeepFM-A-Factorization-Machine-based-Neural-Network-for-CTR-Prediction/" class="article-date">
+  <time datetime="2021-01-19T02:38:05.000Z" itemprop="datePublished">2021-01-18</time>
 </a>
-      
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/12/24/Leetcode-297-Serialize-and-Deserialize-Binary-Tree/">Leetcode 297: Serialize and Deserialize Binary Tree</a>
+    <h1 class="article-title" itemprop="name">
+      Note for DeepFM: A Factorization-Machine based Neural Network for CTR Prediction
     </h1>
   
 
-    </header>
-  </div>
-</article>
-  
+      </header>
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2020/12/23/Leetcode-199-Binary-Tree-Right-Side-View/" class="archive-article-date">
-  <time datetime="2020-12-23T13:56:27.000Z" itemprop="datePublished">12月 23</time>
-</a>
+    <div class="article-entry" itemprop="articleBody">
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/12/23/Leetcode-199-Binary-Tree-Right-Side-View/">Leetcode 199: Binary Tree Right Side View</a>
-    </h1>
-  
+        <p><img src="https://www.researchgate.net/profile/Huifeng_Guo/publication/318829508/figure/fig1/AS:522607722467328@1501610798143/Wide-deep-architecture-of-DeepFM-The-wide-and-deep-component-share-the-same-input-raw.png" alt="DeepFM"></p>
+<h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><ul>
+<li>Compared with Wide &amp; Deep model, DeepFM has a shared input to its ‘wide’ and ‘deep’ parts, with no need of feature engineering besides raw features.</li>
+<li>According to the wide and deep model, considering low- and high-order feature interactions simultaneously brings additional improvement over the case of considering either alone. The key challenge is in effectively modeling feature interactions.</li>
+<li>As a powerful approach to learning feature representation, deep neural networks have the potential to learn sophisticated feature interactions</li>
+<li>The paper proposed a new neural network model DeepFM that integrates the architectures of FM and deep neural networks (DNN). It models low-order feature interactions like FM and models high-order feature interactions like DNN.</li>
+<li>DeepFM can be trained efficiently because its wide part and deep part share the same input and also the embedding vector</li>
+</ul>
+<h2 id="DeepFM"><a href="#DeepFM" class="headerlink" title="DeepFM"></a>DeepFM</h2><h3 id="The-combined-prediction-model"><a href="#The-combined-prediction-model" class="headerlink" title="The combined prediction model"></a>The combined prediction model</h3>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://hjsang.github.io/2021/01/18/Note-for-DeepFM-A-Factorization-Machine-based-Neural-Network-for-CTR-Prediction/" data-id="ckk3eojvu000018u20b9b20su" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/source/tags/CTR-prediction/" rel="tag">CTR prediction</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/source/tags/DeepFM/" rel="tag">DeepFM</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/source/tags/Recommendation-systems/" rel="tag">Recommendation systems</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/source/tags/paper/" rel="tag">paper</a></li></ul>
 
-    </header>
+    </footer>
   </div>
-</article>
   
-  
-    </div></section>
-  
-
-
-  <nav id="page-nav">
     
-    <a class="extend prev" rel="prev" href="/source/tags/Leetcode/">&amp;laquo; 上一页</a><a class="page-number" href="/source/tags/Leetcode/">1</a><span class="page-number current">2</span>
-  </nav>
+<nav id="article-nav">
+  
+  
+    <a href="/2021/01/18/Leetcode-2-Add-Two-Numbers/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Leetcode 2: Add Two Numbers</div>
+    </a>
+  
+</nav>
+
+  
+</article>
 
 </section>
         

@@ -6,7 +6,7 @@
   <link href="http://hjsang.github.io/atom.xml" rel="self"/>
   
   <link href="http://hjsang.github.io/"/>
-  <updated>2021-01-18T22:58:25.255Z</updated>
+  <updated>2021-01-19T02:55:53.137Z</updated>
   <id>http://hjsang.github.io/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Note for DeepFM: A Factorization-Machine based Neural Network for CTR Prediction</title>
+    <link href="http://hjsang.github.io/2021/01/18/Note-for-DeepFM-A-Factorization-Machine-based-Neural-Network-for-CTR-Prediction/"/>
+    <id>http://hjsang.github.io/2021/01/18/Note-for-DeepFM-A-Factorization-Machine-based-Neural-Network-for-CTR-Prediction/</id>
+    <published>2021-01-19T02:38:05.000Z</published>
+    <updated>2021-01-19T02:55:53.137Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;img</summary>
+        
+      
+    
+    
+    
+    
+    <category term="paper" scheme="http://hjsang.github.io/source/tags/paper/"/>
+    
+    <category term="CTR prediction" scheme="http://hjsang.github.io/source/tags/CTR-prediction/"/>
+    
+    <category term="DeepFM" scheme="http://hjsang.github.io/source/tags/DeepFM/"/>
+    
+    <category term="Recommendation systems" scheme="http://hjsang.github.io/source/tags/Recommendation-systems/"/>
+    
+  </entry>
   
   <entry>
     <title>Leetcode 2: Add Two Numbers</title>
@@ -535,33 +564,6 @@
     <category term="dfs" scheme="http://hjsang.github.io/source/tags/dfs/"/>
     
     <category term="bfs" scheme="http://hjsang.github.io/source/tags/bfs/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Algorithm: Binary Search</title>
-    <link href="http://hjsang.github.io/2020/11/26/Algorithm-Binary-Search/"/>
-    <id>http://hjsang.github.io/2020/11/26/Algorithm-Binary-Search/</id>
-    <published>2020-11-26T18:22:27.000Z</published>
-    <updated>2020-11-26T22:00:42.712Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;&lt;img</summary>
-        
-      
-    
-    
-    
-    
-    <category term="Algorithm" scheme="http://hjsang.github.io/source/tags/Algorithm/"/>
-    
-    <category term="LeetCode" scheme="http://hjsang.github.io/source/tags/LeetCode/"/>
-    
-    <category term="Binary Search" scheme="http://hjsang.github.io/source/tags/Binary-Search/"/>
     
   </entry>
   
