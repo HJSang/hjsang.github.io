@@ -6,7 +6,7 @@
   <link href="http://hjsang.github.io/atom.xml" rel="self"/>
   
   <link href="http://hjsang.github.io/"/>
-  <updated>2021-01-19T03:08:54.425Z</updated>
+  <updated>2021-01-20T02:50:02.210Z</updated>
   <id>http://hjsang.github.io/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Leetcode 56: Merge Intervals</title>
+    <link href="http://hjsang.github.io/2021/01/19/Leetcode-56-Merge-Intervals/"/>
+    <id>http://hjsang.github.io/2021/01/19/Leetcode-56-Merge-Intervals/</id>
+    <published>2021-01-20T01:56:23.000Z</published>
+    <updated>2021-01-20T02:50:02.210Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;strong&gt;Medium&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Given</summary>
+        
+      
+    
+    
+    
+    
+    <category term="Leetcode" scheme="http://hjsang.github.io/source/tags/Leetcode/"/>
+    
+    <category term="Medium" scheme="http://hjsang.github.io/source/tags/Medium/"/>
+    
+    <category term="Sort" scheme="http://hjsang.github.io/source/tags/Sort/"/>
+    
+  </entry>
   
   <entry>
     <title>Note for DeepFM: A Factorization-Machine based Neural Network for CTR Prediction</title>
@@ -50,7 +78,7 @@
     <link href="http://hjsang.github.io/2021/01/18/Leetcode-2-Add-Two-Numbers/"/>
     <id>http://hjsang.github.io/2021/01/18/Leetcode-2-Add-Two-Numbers/</id>
     <published>2021-01-18T16:05:33.000Z</published>
-    <updated>2021-01-18T22:58:25.255Z</updated>
+    <updated>2021-01-20T01:52:40.491Z</updated>
     
     
       
@@ -534,36 +562,6 @@
     <category term="Web search ranking" scheme="http://hjsang.github.io/source/tags/Web-search-ranking/"/>
     
     <category term="Paper reading notes" scheme="http://hjsang.github.io/source/tags/Paper-reading-notes/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Leetcode 199: Binary Tree Right Side View</title>
-    <link href="http://hjsang.github.io/2020/12/23/Leetcode-199-Binary-Tree-Right-Side-View/"/>
-    <id>http://hjsang.github.io/2020/12/23/Leetcode-199-Binary-Tree-Right-Side-View/</id>
-    <published>2020-12-23T13:56:27.000Z</published>
-    <updated>2020-12-23T15:31:34.976Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;Medium&lt;/p&gt;
-&lt;p&gt;Given a binary tree,</summary>
-        
-      
-    
-    
-    
-    
-    <category term="Leetcode" scheme="http://hjsang.github.io/source/tags/Leetcode/"/>
-    
-    <category term="Tree" scheme="http://hjsang.github.io/source/tags/Tree/"/>
-    
-    <category term="dfs" scheme="http://hjsang.github.io/source/tags/dfs/"/>
-    
-    <category term="bfs" scheme="http://hjsang.github.io/source/tags/bfs/"/>
     
   </entry>
   
